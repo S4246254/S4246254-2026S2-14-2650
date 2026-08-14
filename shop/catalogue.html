@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop catalogue — Grimdark Forge</title>
+  <meta name="description" content="Browse the full Grimdark Forge catalogue: plastic and resin miniature kits, acrylic paints, sable brushes, terrain and rulebooks. Sort and filter by title, colour, scale, price and stock.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html" aria-current="page">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li aria-current="page">Shop</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Shop catalogue</h1>
+          <p class="page-head__lede">
+            Kits, paints, brushes, terrain and rules. Prices are in Australian
+            dollars and include GST.
+          </p>
+        </div>
+        <div class="page-head__actions">
+          <a class="button" href="cart.html">
+            <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+                <circle cx="9" cy="19" r="1.4"/>
+                <circle cx="17" cy="19" r="1.4"/>
+              </g>
+            </svg>
+            Your cart (3)
+          </a>
+        </div>
+      </div>
+
+      <section class="filter-bar" aria-labelledby="filter-heading">
+        <h2 class="visually-hidden" id="filter-heading">Sort and filter products</h2>
+        <form class="filter-bar__form" action="catalogue.html" method="get">
+          <div class="filter-bar__grid">
+            <p class="field">
+              <label class="field__label" for="filter-title">Product title contains</label>
+              <input type="search" id="filter-title" name="title" placeholder="e.g. sentinel" aria-describedby="filter-title-hint">
+              <span class="field__hint" id="filter-title-hint">Matches product names, not descriptions.</span>
+            </p>
+
+            <p class="field">
+              <label class="field__label" for="filter-colour">Colour</label>
+              <select id="filter-colour" name="colour">
+                <option value="" selected>Any colour</option>
+                <option value="bone">Bone and ivory</option>
+                <option value="rust">Rust and oxide</option>
+                <option value="steel">Steel and gunmetal</option>
+                <option value="green">Field green</option>
+                <option value="unpainted">Unpainted / bare plastic</option>
+              </select>
+            </p>
+
+            <p class="field">
+              <label class="field__label" for="filter-scale">Size or scale</label>
+              <select id="filter-scale" name="scale">
+                <option value="" selected>Any size</option>
+                <option value="15mm">15 mm</option>
+                <option value="28mm">28 mm</option>
+                <option value="32mm">32 mm</option>
+                <option value="30ml">30 ml pot</option>
+                <option value="60ml">60 ml pot</option>
+              </select>
+            </p>
+
+            <p class="field">
+              <label class="field__label" for="filter-price">Maximum price</label>
+              <input type="number" id="filter-price" name="max-price" min="0" max="500" step="1" placeholder="100" aria-describedby="filter-price-hint">
+              <span class="field__hint" id="filter-price-hint">In Australian dollars.</span>
+            </p>
+
+            <p class="field">
+              <label class="field__label" for="filter-quantity">Minimum quantity in stock</label>
+              <input type="number" id="filter-quantity" name="min-quantity" min="0" max="99" step="1" placeholder="1" aria-describedby="filter-quantity-hint">
+              <span class="field__hint" id="filter-quantity-hint">Use 1 to hide everything that is out of stock.</span>
+            </p>
+
+            <p class="field">
+              <label class="field__label" for="filter-sort">Sort by</label>
+              <select id="filter-sort" name="sort">
+                <option value="relevance" selected>Most relevant</option>
+                <option value="title-asc">Title, A to Z</option>
+                <option value="title-desc">Title, Z to A</option>
+                <option value="price-asc">Price, low to high</option>
+                <option value="price-desc">Price, high to low</option>
+                <option value="rating-desc">Highest rated</option>
+              </select>
+            </p>
+
+            <div class="filter-bar__actions">
+              <button type="submit" class="button button--primary">Apply filters</button>
+              <button type="reset" class="button button--quiet">Reset</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <div class="result-summary">
+        <p>Showing 8 of 143 products.</p>
+        <p>Page 1 of 18</p>
+      </div>
+
+      <section class="section" aria-labelledby="products-heading">
+        <h2 class="visually-hidden" id="products-heading">Products</h2>
+
+        <div class="grid-cards">
+          <article class="card">
+            <img class="card__media" src="../assets/img/kit-sentinel.svg" alt="A heavily armoured bipedal walker miniature with a slab shield on its left arm and a long-barrelled cannon on its right.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Ironclad Sentinel</a></h3>
+              <p class="card__meta">
+                <span>28 mm scale</span>
+                <span>Plastic kit</span>
+              </p>
+              <p class="card__summary">
+                Multi-part plastic walker with three head options and two weapon arms.
+                Push-fit torso, no glue required.
+              </p>
+              <p class="rating">
+                <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-45">★★★★★</span></span>
+                <span class="rating__value">4.5 out of 5, from 38 reviews</span>
+              </p>
+              <div class="card__footer">
+                <p class="price">A$42.00 <span class="price--was">A$48.00</span></p>
+                <span class="stock stock--in">12 in stock</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/kit-warden.svg" alt="A broad-shouldered infantry miniature in layered plate armour holding a two-handed maul across its body.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Bastion Warden</a></h3>
+              <p class="card__meta">
+                <span>32 mm scale</span>
+                <span>Resin kit</span>
+              </p>
+              <p class="card__summary">
+                A single-piece resin character with a separate maul and cloak. Sharp
+                casting; wash before priming.
+              </p>
+              <p class="rating">
+                <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-4">★★★★★</span></span>
+                <span class="rating__value">4 out of 5, from 12 reviews</span>
+              </p>
+              <div class="card__footer">
+                <p class="price">A$29.00</p>
+                <span class="stock stock--low">Only 3 left</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/kit-scarab.svg" alt="Three small six-legged mechanical constructs mounted on a single scenic base.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Scarab Skirmishers</a></h3>
+              <p class="card__meta">
+                <span>15 mm scale</span>
+                <span>Plastic kit</span>
+              </p>
+              <p class="card__summary">
+                Six constructs across two sprues, with alternate leg positions so no
+                two need to look alike.
+              </p>
+              <p class="rating">
+                <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-35">★★★★★</span></span>
+                <span class="rating__value">3.5 out of 5, from 9 reviews</span>
+              </p>
+              <div class="card__footer">
+                <p class="price">A$24.00</p>
+                <span class="stock stock--in">21 in stock</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/paint-oxide.svg" alt="A hexagonal paint pot with a rust-brown label, standing beside a swatch card showing the colour brushed over bare metal.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Oxide Wash, 30 ml</a></h3>
+              <p class="card__meta">
+                <span>30 ml pot</span>
+                <span>Acrylic shade</span>
+              </p>
+              <p class="card__summary">
+                A thin shade that settles into recessed detail. Made for bare metal
+                and weathered plate.
+              </p>
+              <p class="rating">
+                <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-45">★★★★★</span></span>
+                <span class="rating__value">4.5 out of 5, from 64 reviews</span>
+              </p>
+              <div class="card__footer">
+                <p class="price">A$8.99 <span class="price--was">A$11.50</span></p>
+                <span class="stock stock--low">Only 4 left</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/paint-bone.svg" alt="A hexagonal paint pot with a pale bone-coloured label beside a swatch card showing the colour over dark primer.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Bone Ivory, 30 ml</a></h3>
+              <p class="card__meta">
+                <span>30 ml pot</span>
+                <span>Acrylic base</span>
+              </p>
+              <p class="card__summary">
+                An opaque off-white that covers dark primer in two thin coats. Prone
+                to chalkiness if applied thickly.
+              </p>
+              <p class="rating">
+                <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-3">★★★★★</span></span>
+                <span class="rating__value">3 out of 5, from 27 reviews</span>
+              </p>
+              <div class="card__footer">
+                <p class="price">A$8.99</p>
+                <span class="stock stock--in">33 in stock</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/brush-set.svg" alt="Three wooden-handled brushes laid side by side in descending size, with their bristles pointed to fine tips.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Sable Brush Set</a></h3>
+              <p class="card__meta">
+                <span>Sizes 0, 1 and 2</span>
+                <span>Kolinsky sable</span>
+              </p>
+              <p class="card__summary">
+                Three natural-hair brushes that hold a point through a full session.
+              </p>
+              <p class="rating">
+                <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-5">★★★★★</span></span>
+                <span class="rating__value">5 out of 5, from 41 reviews</span>
+              </p>
+              <div class="card__footer">
+                <p class="price">A$34.50</p>
+                <span class="stock stock--in">8 in stock</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/terrain-ruins.svg" alt="A ruined stone wall section with a broken archway and rubble at its base, built as tabletop scenery.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Ruined Chapel Set</a></h3>
+              <p class="card__meta">
+                <span>28 mm scale</span>
+                <span>Terrain</span>
+              </p>
+              <p class="card__summary">
+                Four wall sections and an archway in pre-textured resin. Assembles
+                into one large ruin or two smaller pieces.
+              </p>
+              <p class="rating">
+                <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-4">★★★★★</span></span>
+                <span class="rating__value">4 out of 5, from 17 reviews</span>
+              </p>
+              <div class="card__footer">
+                <p class="price">A$78.00</p>
+                <span class="stock stock--out">Out of stock</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/rulebook.svg" alt="A closed hardback rulebook with an embossed anvil emblem on its cover.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Rules of Engagement, third edition</a></h3>
+              <p class="card__meta">
+                <span>288 pages</span>
+                <span>Hardback</span>
+              </p>
+              <p class="card__summary">
+                The full ruleset with the 2026 errata folded in, plus six scenarios
+                and a points appendix.
+              </p>
+              <p class="rating">
+                <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-4">★★★★★</span></span>
+                <span class="rating__value">4 out of 5, from 88 reviews</span>
+              </p>
+              <div class="card__footer">
+                <p class="price">A$65.00</p>
+                <span class="stock stock--in">15 in stock</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <nav class="pagination" aria-label="Catalogue pages">
+          <ul class="pagination__list">
+            <li><a class="pagination__link" href="catalogue.html" aria-current="page">1</a></li>
+            <li><a class="pagination__link" href="catalogue.html">2</a></li>
+            <li><a class="pagination__link" href="catalogue.html">3</a></li>
+            <li><a class="pagination__link" href="catalogue.html">18</a></li>
+            <li><a class="pagination__link" href="catalogue.html">Next page</a></li>
+          </ul>
+        </nav>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

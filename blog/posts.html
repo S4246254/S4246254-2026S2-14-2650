@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — Grimdark Forge</title>
+  <meta name="description" content="Painting tutorials, basing recipes and event write-ups from the Grimdark Forge staff and community. Search and filter posts by title, author, tag or date.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li aria-current="page">Blog</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Blog</h1>
+          <p class="page-head__lede">
+            Painting tutorials, basing recipes and event write-ups, mostly from the
+            people behind the counter.
+          </p>
+        </div>
+        <div class="page-head__actions">
+          <a class="button button--primary" href="new-post.html">Write a post</a>
+        </div>
+      </div>
+
+      <section class="filter-bar" aria-labelledby="filter-heading">
+        <h2 class="visually-hidden" id="filter-heading">Search and filter posts</h2>
+        <form class="filter-bar__form" action="posts.html" method="get">
+          <div class="filter-bar__grid">
+            <p class="field">
+              <label class="field__label" for="filter-title">Title contains</label>
+              <input type="search" id="filter-title" name="title" placeholder="e.g. highlighting" aria-describedby="filter-title-hint">
+              <span class="field__hint" id="filter-title-hint">Matches post titles and summaries.</span>
+            </p>
+
+            <p class="field">
+              <label class="field__label" for="filter-author">Author</label>
+              <select id="filter-author" name="author">
+                <option value="" selected>Anyone</option>
+                <option value="renn">Renn Vasco</option>
+                <option value="kaya">Kaya Ellery</option>
+                <option value="toma">Toma Brandt</option>
+                <option value="oksana">Oksana Reyes</option>
+              </select>
+            </p>
+
+            <p class="field">
+              <label class="field__label" for="filter-tag">Tag</label>
+              <select id="filter-tag" name="tag">
+                <option value="" selected>All tags</option>
+                <option value="painting">Painting</option>
+                <option value="basing">Basing</option>
+                <option value="terrain">Terrain</option>
+                <option value="events">Events</option>
+                <option value="beginner">Beginner</option>
+              </select>
+            </p>
+
+            <p class="field">
+              <label class="field__label" for="filter-from">Published from</label>
+              <input type="date" id="filter-from" name="from" value="2026-01-01" aria-describedby="filter-from-hint">
+              <span class="field__hint" id="filter-from-hint">Leave as is to search the whole archive.</span>
+            </p>
+
+            <p class="field">
+              <label class="field__label" for="filter-sort">Sort by</label>
+              <select id="filter-sort" name="sort">
+                <option value="date-desc" selected>Newest first</option>
+                <option value="date-asc">Oldest first</option>
+                <option value="title-asc">Title, A to Z</option>
+                <option value="comments-desc">Most discussed</option>
+              </select>
+            </p>
+
+            <div class="filter-bar__actions">
+              <button type="submit" class="button button--primary">Search</button>
+              <button type="reset" class="button button--quiet">Reset</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <div class="result-summary">
+        <p>Showing 6 of 71 posts, newest first.</p>
+        <p>Page 1 of 12</p>
+      </div>
+
+      <section class="section" aria-labelledby="posts-heading">
+        <h2 class="visually-hidden" id="posts-heading">Posts</h2>
+
+        <div class="grid-cards">
+          <article class="card">
+            <img class="card__media" src="../assets/img/photo-highlights.svg" alt="A close-up of a miniature's shoulder plate with a fine edge highlight running along the rim.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="post.html">Edge highlighting without the chalky finish</a></h3>
+              <p class="byline">
+                <img class="byline__avatar" src="../assets/img/avatar-renn.svg" alt="">
+                <a class="byline__name" href="../account.html">Renn Vasco</a>
+                <time datetime="2026-08-02">2 August 2026</time>
+              </p>
+              <p class="card__summary">
+                Most edge highlights read as chalk because the last pass is too opaque
+                and too wide. Here is the thinning ratio I use and where to stop.
+              </p>
+              <ul class="tag-list">
+                <li><a class="tag" href="posts.html">Painting</a></li>
+                <li><a class="tag" href="posts.html">Beginner</a></li>
+              </ul>
+              <div class="card__footer">
+                <span class="text-muted text-small">18 comments</span>
+                <a href="post.html">Read the post</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/photo-basing.svg" alt="Three finished bases side by side showing gravel, static grass and a broken paving slab.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="post.html">A basing recipe that takes four minutes a model</a></h3>
+              <p class="byline">
+                <img class="byline__avatar" src="../assets/img/avatar-kaya.svg" alt="">
+                <a class="byline__name" href="../account.html">Kaya Ellery</a>
+                <time datetime="2026-07-24">24 July 2026</time>
+              </p>
+              <p class="card__summary">
+                Bases are where an army stops looking like loose models. This is the
+                fastest recipe I have found that still stands up close.
+              </p>
+              <ul class="tag-list">
+                <li><a class="tag" href="posts.html">Basing</a></li>
+                <li><a class="tag" href="posts.html">Beginner</a></li>
+              </ul>
+              <div class="card__footer">
+                <span class="text-muted text-small">9 comments</span>
+                <a href="post.html">Read the post</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/photo-primer.svg" alt="A miniature primed in flat grey, standing on a cork block before any colour is applied.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="post.html">Priming in humid weather, and why yours went furry</a></h3>
+              <p class="byline">
+                <img class="byline__avatar" src="../assets/img/avatar-renn.svg" alt="">
+                <a class="byline__name" href="../account.html">Renn Vasco</a>
+                <time datetime="2026-07-11">11 July 2026</time>
+              </p>
+              <p class="card__summary">
+                Spray primer fails in a specific and predictable way above about
+                seventy per cent humidity. Here is what is happening and how to
+                recover a furry model.
+              </p>
+              <ul class="tag-list">
+                <li><a class="tag" href="posts.html">Painting</a></li>
+              </ul>
+              <div class="card__footer">
+                <span class="text-muted text-small">31 comments</span>
+                <a href="post.html">Read the post</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/terrain-ruins.svg" alt="A ruined stone wall section with a broken archway and rubble at its base.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="post.html">Building a ruined block from one sheet of foam</a></h3>
+              <p class="byline">
+                <img class="byline__avatar" src="../assets/img/avatar-kaya.svg" alt="">
+                <a class="byline__name" href="../account.html">Kaya Ellery</a>
+                <time datetime="2026-06-29">29 June 2026</time>
+              </p>
+              <p class="card__summary">
+                One A2 sheet, a bread knife and an evening gets you four modular wall
+                sections that pack flat.
+              </p>
+              <ul class="tag-list">
+                <li><a class="tag" href="posts.html">Terrain</a></li>
+              </ul>
+              <div class="card__footer">
+                <span class="text-muted text-small">12 comments</span>
+                <a href="post.html">Read the post</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/photo-table.svg" alt="A gaming table seen from above with terrain laid out and two forces deployed on opposite edges.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="post.html">Winter open: what actually won, and what did not</a></h3>
+              <p class="byline">
+                <img class="byline__avatar" src="../assets/img/avatar-toma.svg" alt="">
+                <a class="byline__name" href="../account.html">Toma Brandt</a>
+                <time datetime="2026-06-15">15 June 2026</time>
+              </p>
+              <p class="card__summary">
+                Thirty-two players, five rounds, and a top table nobody predicted.
+                The full breakdown with lists.
+              </p>
+              <ul class="tag-list">
+                <li><a class="tag" href="posts.html">Events</a></li>
+              </ul>
+              <div class="card__footer">
+                <span class="text-muted text-small">44 comments</span>
+                <a href="post.html">Read the post</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/photo-workbench.svg" alt="A painting workbench with brushes in a jar, open paint pots and a desk lamp angled over a cutting mat.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="post.html">Setting up a desk you will actually sit at</a></h3>
+              <p class="byline">
+                <img class="byline__avatar" src="../assets/img/avatar-oksana.svg" alt="">
+                <a class="byline__name" href="../account.html">Oksana Reyes</a>
+                <time datetime="2026-05-30">30 May 2026</time>
+              </p>
+              <p class="card__summary">
+                Light, height and where you put the water pot. Three cheap changes
+                that doubled how often I paint.
+              </p>
+              <ul class="tag-list">
+                <li><a class="tag" href="posts.html">Beginner</a></li>
+              </ul>
+              <div class="card__footer">
+                <span class="text-muted text-small">7 comments</span>
+                <a href="post.html">Read the post</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <nav class="pagination" aria-label="Blog pages">
+          <ul class="pagination__list">
+            <li><a class="pagination__link" href="posts.html" aria-current="page">1</a></li>
+            <li><a class="pagination__link" href="posts.html">2</a></li>
+            <li><a class="pagination__link" href="posts.html">3</a></li>
+            <li><a class="pagination__link" href="posts.html">12</a></li>
+            <li><a class="pagination__link" href="posts.html">Next page</a></li>
+          </ul>
+        </nav>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

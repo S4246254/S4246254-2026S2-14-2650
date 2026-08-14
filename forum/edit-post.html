@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit your post — Grimdark Forge forum</title>
+  <meta name="description" content="Edit a forum post you wrote on Grimdark Forge. Only posts belonging to the signed-in account can be edited.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="boards.html">Forum</a></li>
+          <li><a href="thread.html">Is the Sentinel worth its points?</a></li>
+          <li aria-current="page">Edit post</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Edit your post</h1>
+          <p class="page-head__lede">
+            Originally posted <time datetime="2026-08-10T10:05">10 August 2026 at 10:05 am</time>
+            in “Is the Sentinel actually worth its points at 1500?”.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout callout--primary">
+        <h2 class="callout__title">You are editing your own post</h2>
+        <p>
+          This post was written by Kaya Ellery, the signed-in account, so it can be
+          edited here. Posts written by other members show a <strong>Report</strong>
+          control instead of <strong>Edit</strong> and <strong>Delete</strong>, and
+          this page is not reachable for them.
+        </p>
+      </div>
+
+      <div class="layout-aside">
+        <div>
+          <form class="form">
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Post content</legend>
+
+              <p class="field">
+                <label class="field__label" for="post-title">Post title <span class="field__required" aria-hidden="true">*</span></label>
+                <input type="text" id="post-title" name="post-title" value="It is a target-priority tax, not a scoring piece" required aria-describedby="post-title-hint">
+                <span class="field__hint" id="post-title-hint">Shown in the reply list and in search results.</span>
+              </p>
+
+              <p class="field">
+                <label class="field__label" for="post-body">Post text <span class="field__required" aria-hidden="true">*</span></label>
+                <textarea id="post-body" name="post-body" required aria-describedby="post-body-hint">You are measuring it against objectives, which it was never going to win. Measure it against what your opponent does on turn one instead. In six of my last eight games the Sentinel ate the entire first round of anti-armour shooting, because leaving it alive is worse than shooting anything else.
+
+That is 210 points buying a turn of near-total safety for your infantry. The block you want to add instead would be taking those hits, and blocks fold when they lose a third of their models.</textarea>
+                <span class="field__hint" id="post-body-hint">Edits made more than five minutes after posting are marked as edited.</span>
+              </p>
+
+              <div class="field">
+                <label class="field__label" for="post-image">Replace the attached image</label>
+                <span class="file-field">
+                  <img class="file-field__preview" src="../assets/img/photo-highlights.svg" alt="Preview of the currently attached image: a close-up of a miniature's shoulder plate with a fine edge highlight along the rim.">
+                  <input type="file" id="post-image" name="post-image" accept="image/*" aria-describedby="post-image-hint">
+                </span>
+                <span class="field__hint" id="post-image-hint">Leave empty to keep the current image. JPEG or PNG, up to 4 MB.</span>
+              </div>
+
+              <p class="field field--inline">
+                <input type="checkbox" id="post-remove-image" name="post-remove-image">
+                <label class="field__label" for="post-remove-image">Remove the attached image entirely</label>
+              </p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Edit note</legend>
+
+              <p class="field">
+                <label class="field__label" for="edit-reason">Reason for the edit</label>
+                <input type="text" id="edit-reason" name="edit-reason" aria-describedby="edit-reason-hint">
+                <span class="field__hint" id="edit-reason-hint">Optional, shown publicly beneath the post. Useful when you are correcting a figure someone has already replied to.</span>
+              </p>
+            </fieldset>
+
+            <div class="form__actions">
+              <a class="button button--primary" href="thread.html">Save changes</a>
+              <a class="button button--quiet" href="thread.html">Cancel</a>
+              <a class="button button--danger" href="delete-post.html">Delete this post</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="layout-aside__side" aria-labelledby="preview-heading">
+          <div class="panel">
+            <h2 class="panel__title" id="preview-heading">Current version</h2>
+            <p class="byline">
+              <img class="byline__avatar" src="../assets/img/avatar-kaya.svg" alt="">
+              <span class="byline__name">Kaya Ellery</span>
+              <time datetime="2026-08-10T10:05">10 August 2026</time>
+            </p>
+            <p class="text-small text-muted mt-s">
+              This post has 3 direct replies. Editing it will not notify the people
+              who replied.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h2 class="panel__title">Edit history</h2>
+            <ul class="footer-nav__list">
+              <li>
+                <span>Posted</span>
+                <span class="sitemap-tree__note"><time datetime="2026-08-10T10:05">10 August 2026 at 10:05 am</time></span>
+              </li>
+              <li>
+                <span>Edited — fixed points value</span>
+                <span class="sitemap-tree__note"><time datetime="2026-08-10T10:41">10 August 2026 at 10:41 am</time></span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

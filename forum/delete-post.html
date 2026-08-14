@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete your post — Grimdark Forge forum</title>
+  <meta name="description" content="Confirm deletion of a forum post you wrote on Grimdark Forge. Only posts belonging to the signed-in account can be deleted.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="boards.html">Forum</a></li>
+          <li><a href="thread.html">Is the Sentinel worth its points?</a></li>
+          <li aria-current="page">Delete post</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Delete your post?</h1>
+          <p class="page-head__lede">
+            This cannot be undone. Read the post below and make sure it is the one
+            you meant.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout callout--danger">
+        <h2 class="callout__title">Three replies will be orphaned</h2>
+        <p>
+          This post has 3 direct replies. Deleting it keeps those replies in the
+          thread but removes the post they were answering, so the conversation will
+          read oddly. Editing the post is usually the better option.
+        </p>
+      </div>
+
+      <section class="section" aria-labelledby="target-heading">
+        <div class="section__head">
+          <h2 id="target-heading">The post you are about to delete</h2>
+        </div>
+
+        <article class="post post--mine">
+          <div class="post__head">
+            <h3 class="post__title">It is a target-priority tax, not a scoring piece</h3>
+            <span class="badge badge--primary">Your post</span>
+          </div>
+
+          <p class="byline">
+            <img class="byline__avatar" src="../assets/img/avatar-kaya.svg" alt="">
+            <span class="byline__name">Kaya Ellery</span>
+            <time datetime="2026-08-10T10:05">10 August 2026 at 10:05 am</time>
+          </p>
+
+          <div class="prose">
+            <p>
+              You are measuring it against objectives, which it was never going to
+              win. Measure it against what your opponent does on turn one instead.
+              In six of my last eight games the Sentinel ate the entire first round
+              of anti-armour shooting, because leaving it alive is worse than
+              shooting anything else.
+            </p>
+            <p>
+              That is 210 points buying a turn of near-total safety for your
+              infantry. The block you want to add instead would be taking those
+              hits, and blocks fold when they lose a third of their models.
+            </p>
+          </div>
+
+          <figure class="post__figure">
+            <img class="post__image" src="../assets/img/photo-highlights.svg" alt="A close-up of a miniature's shoulder plate with a fine edge highlight running along the rim.">
+            <figcaption>The attached image will be deleted with the post.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="confirm-heading">
+        <div class="section__head">
+          <h2 id="confirm-heading">Confirm deletion</h2>
+        </div>
+
+        <form class="form">
+          <fieldset class="fieldset">
+            <legend class="fieldset__legend">Why are you deleting this?</legend>
+
+            <p class="field">
+              <label class="field__label" for="delete-reason">Reason</label>
+              <select id="delete-reason" name="delete-reason" aria-describedby="delete-reason-hint">
+                <option value="" selected>Prefer not to say</option>
+                <option value="mistake">Posted by mistake</option>
+                <option value="duplicate">Duplicate of another post</option>
+                <option value="wrong">The information was wrong</option>
+                <option value="resolved">No longer relevant</option>
+              </select>
+              <span class="field__hint" id="delete-reason-hint">Only visible to moderators. Helps them spot threads that keep going wrong.</span>
+            </p>
+
+            <p class="field field--inline">
+              <input type="checkbox" id="delete-confirm" name="delete-confirm" required aria-describedby="delete-confirm-hint">
+              <label class="field__label" for="delete-confirm">I understand this permanently deletes the post and its attached image</label>
+            </p>
+            <span class="field__hint" id="delete-confirm-hint">Required. Deleted posts are not recoverable by staff.</span>
+          </fieldset>
+
+          <div class="form__actions">
+            <a class="button button--danger-solid" href="thread.html">
+              <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 6.5h16M9.5 6.5V4h5v2.5"/>
+                  <path d="M6.5 6.5 7.5 20h9l1-13.5"/>
+                  <path d="M10.5 10v6M13.5 10v6"/>
+                </g>
+              </svg>
+              Delete post permanently
+            </a>
+            <a class="button" href="edit-post.html">Edit it instead</a>
+            <a class="button button--quiet" href="thread.html">Cancel and go back</a>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ironclad Sentinel — Grimdark Forge shop</title>
+  <meta name="description" content="The Ironclad Sentinel, a 28 mm multi-part plastic walker kit with three head options and two weapon arms. Specifications, options and customer reviews.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html" aria-current="page">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="catalogue.html">Shop</a></li>
+          <li aria-current="page">Ironclad Sentinel</li>
+        </ol>
+      </nav>
+
+      <div class="product-layout">
+        <!-- Named with aria-label rather than a heading: this region precedes the
+             page's level-one heading in the source, and opening the heading tree
+             at level two would put the document outline out of order. -->
+        <section aria-label="Product images">
+          <div class="product-gallery">
+            <img class="product-gallery__main" src="../assets/img/kit-sentinel.svg" alt="The assembled Ironclad Sentinel: a two-legged armoured walker with a slab shield on its left arm and a long-barrelled cannon on its right, standing on a rubble base.">
+            <ul class="product-gallery__thumbs">
+              <li>
+                <img class="product-gallery__thumb" src="../assets/img/photo-sentinel-sprue.svg" alt="The unbuilt plastic sprue, showing leg, torso and weapon components still attached to the frame.">
+              </li>
+              <li>
+                <img class="product-gallery__thumb" src="../assets/img/photo-sentinel-scale.svg" alt="The assembled walker beside three infantry miniatures for scale, standing roughly twice their height.">
+              </li>
+              <li>
+                <img class="product-gallery__thumb" src="../assets/img/photo-primer.svg" alt="The same walker primed in flat grey, before any colour has been applied.">
+              </li>
+              <li>
+                <img class="product-gallery__thumb" src="../assets/img/photo-army.svg" alt="Two finished walkers standing behind a rank of painted infantry.">
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div>
+          <h1>Ironclad Sentinel</h1>
+
+          <p class="rating mt-s">
+            <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-45">★★★★★</span></span>
+            <span class="rating__value">4.5 out of 5, from 38 reviews</span>
+            <a href="../reviews/reviews.html">Read the reviews</a>
+          </p>
+
+          <p class="price mt-s">A$42.00 <span class="price--was">A$48.00</span></p>
+          <p class="stock stock--in">12 in stock — dispatched within two business days</p>
+
+          <div class="prose mt-m">
+            <p>
+              A multi-part plastic walker designed as the anchor of an infantry line.
+              The torso is push-fit and needs no glue, while the arms, head and
+              banner are separate components so the model can be built in several
+              configurations.
+            </p>
+            <p>
+              Supplied unpainted and unassembled, with a 60 mm rubble base and a
+              transfer sheet of company markings.
+            </p>
+          </div>
+
+          <form class="form mt-l">
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Choose your options</legend>
+
+              <div class="form__grid form__grid--two">
+                <p class="field">
+                  <label class="field__label" for="option-weapon">Weapon arm <span class="field__required" aria-hidden="true">*</span></label>
+                  <select id="option-weapon" name="weapon" required aria-describedby="option-weapon-hint">
+                    <option value="cannon" selected>Siege cannon</option>
+                    <option value="flamer">Twin flamer</option>
+                    <option value="both">Both arms included (add A$6.00)</option>
+                  </select>
+                  <span class="field__hint" id="option-weapon-hint">Both arms are on the sprue; choosing “both” adds a second sprue.</span>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="option-head">Head <span class="field__required" aria-hidden="true">*</span></label>
+                  <select id="option-head" name="head" required>
+                    <option value="visor" selected>Sealed visor</option>
+                    <option value="optic">Single optic</option>
+                    <option value="crest">Crested command head</option>
+                  </select>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="option-base">Base finish</label>
+                  <select id="option-base" name="base">
+                    <option value="plain" selected>Plain 60 mm base</option>
+                    <option value="rubble">Pre-textured rubble base</option>
+                    <option value="none">No base supplied</option>
+                  </select>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="option-quantity">Quantity</label>
+                  <input type="number" id="option-quantity" name="quantity" value="1" min="1" max="12" step="1" aria-describedby="option-quantity-hint">
+                  <span class="field__hint" id="option-quantity-hint">Maximum 12 per order while stock is limited.</span>
+                </p>
+              </div>
+
+              <p class="field field--inline">
+                <input type="checkbox" id="option-assembled" name="assembled">
+                <label class="field__label" for="option-assembled">Add assembly service (add A$15.00, allow five extra days)</label>
+              </p>
+            </fieldset>
+
+            <div class="form__actions">
+              <a class="button button--primary" href="cart.html">
+                <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+                  <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+                    <circle cx="9" cy="19" r="1.4"/>
+                    <circle cx="17" cy="19" r="1.4"/>
+                  </g>
+                </svg>
+                Add to cart
+              </a>
+              <button type="button" class="button">Add to wishlist</button>
+              <a class="button button--quiet" href="catalogue.html">Back to catalogue</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="specs-heading">
+        <div class="section__head">
+          <h2 id="specs-heading">Specifications</h2>
+        </div>
+
+        <dl class="spec-list">
+          <dt>Scale</dt>
+          <dd>28 mm heroic</dd>
+
+          <dt>Material</dt>
+          <dd>Polystyrene plastic</dd>
+
+          <dt>Components</dt>
+          <dd>31 parts across two sprues</dd>
+
+          <dt>Assembled height</dt>
+          <dd>74 mm to the top of the visor</dd>
+
+          <dt>Base supplied</dt>
+          <dd>60 mm round, plain or pre-textured</dd>
+
+          <dt>Assembly</dt>
+          <dd>Push-fit torso and legs; arms and head require plastic cement</dd>
+
+          <dt>Paint required</dt>
+          <dd>Supplied unpainted; primer sold separately</dd>
+
+          <dt>Product code</dt>
+          <dd>GF-KIT-0142</dd>
+        </dl>
+      </section>
+
+      <section class="section" aria-labelledby="related-heading">
+        <div class="section__head">
+          <h2 id="related-heading">Often bought with this</h2>
+          <a href="catalogue.html">See all products</a>
+        </div>
+
+        <div class="grid-cards">
+          <article class="card">
+            <img class="card__media" src="../assets/img/paint-oxide.svg" alt="A hexagonal paint pot with a rust-brown label beside a swatch card showing the colour over bare metal.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Oxide Wash, 30 ml</a></h3>
+              <p class="card__summary">The shade most people use on the Sentinel's exhaust housing.</p>
+              <div class="card__footer">
+                <p class="price">A$8.99</p>
+                <span class="stock stock--low">Only 4 left</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/brush-set.svg" alt="Three wooden-handled brushes laid side by side in descending size.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Sable Brush Set</a></h3>
+              <p class="card__summary">Sizes 0, 1 and 2 — enough for panel lines and edge highlights.</p>
+              <div class="card__footer">
+                <p class="price">A$34.50</p>
+                <span class="stock stock--in">8 in stock</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__media" src="../assets/img/rulebook.svg" alt="A closed hardback rulebook with an embossed anvil emblem on its cover.">
+            <div class="card__body">
+              <h3 class="card__title"><a href="product.html">Rules of Engagement, third edition</a></h3>
+              <p class="card__summary">Contains the walker's current profile and points cost.</p>
+              <div class="card__footer">
+                <p class="price">A$65.00</p>
+                <span class="stock stock--in">15 in stock</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

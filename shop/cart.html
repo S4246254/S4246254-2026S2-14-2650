@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your cart — Grimdark Forge shop</title>
+  <meta name="description" content="Review the items in your Grimdark Forge cart, change quantities and variants, remove line items, and continue to checkout.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html" aria-current="page">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="catalogue.html">Shop</a></li>
+          <li aria-current="page">Cart</li>
+        </ol>
+      </nav>
+
+      <ol class="steps">
+        <li class="steps__item" aria-current="step">1. Cart</li>
+        <li class="steps__item">2. Checkout</li>
+        <li class="steps__item">3. Confirmation</li>
+      </ol>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Your cart</h1>
+          <p class="page-head__lede">
+            Three items. Change a quantity or variant and select
+            <strong>Update cart</strong> to recalculate the totals.
+          </p>
+        </div>
+        <div class="page-head__actions">
+          <a class="button" href="catalogue.html">Continue shopping</a>
+        </div>
+      </div>
+
+      <div class="layout-aside">
+        <div>
+          <form>
+            <section aria-labelledby="lines-heading">
+              <h2 class="visually-hidden" id="lines-heading">Items in your cart</h2>
+
+              <div class="table-scroll">
+                <table class="data-table">
+                  <caption>Three items in your cart, showing unit price, quantity and line total.</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Product</th>
+                      <th scope="col">Variant</th>
+                      <th scope="col" class="is-numeric">Unit price</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col" class="is-numeric">Line total</th>
+                      <th scope="col"><span class="visually-hidden">Remove item</span></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <span class="cart-line__identity">
+                          <img class="cart-line__media" src="../assets/img/kit-sentinel.svg" alt="An armoured bipedal walker miniature with a slab shield and long-barrelled cannon.">
+                          <span>
+                            <a class="cart-line__name" href="product.html">Ironclad Sentinel</a>
+                            <span class="text-small text-muted">GF-KIT-0142</span>
+                          </span>
+                        </span>
+                      </th>
+                      <td>
+                        <label class="visually-hidden" for="variant-sentinel">Weapon arm for Ironclad Sentinel</label>
+                        <select id="variant-sentinel" name="variant-sentinel">
+                          <option value="cannon" selected>Siege cannon</option>
+                          <option value="flamer">Twin flamer</option>
+                          <option value="both">Both arms</option>
+                        </select>
+                      </td>
+                      <td class="is-numeric">A$42.00</td>
+                      <td>
+                        <span class="qty-control">
+                          <label class="visually-hidden" for="qty-sentinel">Quantity of Ironclad Sentinel</label>
+                          <input type="number" id="qty-sentinel" name="qty-sentinel" value="1" min="1" max="12" step="1">
+                        </span>
+                      </td>
+                      <td class="is-numeric">A$42.00</td>
+                      <td>
+                        <a class="button button--small button--icon button--danger" href="cart.html" aria-label="Remove Ironclad Sentinel from cart">
+                          <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+                            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M4 6.5h16M9.5 6.5V4h5v2.5"/>
+                              <path d="M6.5 6.5 7.5 20h9l1-13.5"/>
+                              <path d="M10.5 10v6M13.5 10v6"/>
+                            </g>
+                          </svg>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">
+                        <span class="cart-line__identity">
+                          <img class="cart-line__media" src="../assets/img/paint-oxide.svg" alt="A hexagonal paint pot with a rust-brown label.">
+                          <span>
+                            <a class="cart-line__name" href="product.html">Oxide Wash</a>
+                            <span class="text-small text-muted">GF-PNT-0031</span>
+                          </span>
+                        </span>
+                      </th>
+                      <td>
+                        <label class="visually-hidden" for="variant-oxide">Pot size for Oxide Wash</label>
+                        <select id="variant-oxide" name="variant-oxide">
+                          <option value="30" selected>30 ml pot</option>
+                          <option value="60">60 ml pot</option>
+                        </select>
+                      </td>
+                      <td class="is-numeric">A$8.99</td>
+                      <td>
+                        <span class="qty-control">
+                          <label class="visually-hidden" for="qty-oxide">Quantity of Oxide Wash</label>
+                          <input type="number" id="qty-oxide" name="qty-oxide" value="1" min="1" max="4" step="1">
+                        </span>
+                      </td>
+                      <td class="is-numeric">A$8.99</td>
+                      <td>
+                        <a class="button button--small button--icon button--danger" href="cart.html" aria-label="Remove Oxide Wash from cart">
+                          <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+                            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M4 6.5h16M9.5 6.5V4h5v2.5"/>
+                              <path d="M6.5 6.5 7.5 20h9l1-13.5"/>
+                              <path d="M10.5 10v6M13.5 10v6"/>
+                            </g>
+                          </svg>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">
+                        <span class="cart-line__identity">
+                          <img class="cart-line__media" src="../assets/img/brush-set.svg" alt="Three wooden-handled brushes laid side by side in descending size.">
+                          <span>
+                            <a class="cart-line__name" href="product.html">Sable Brush Set</a>
+                            <span class="text-small text-muted">GF-TOL-0008</span>
+                          </span>
+                        </span>
+                      </th>
+                      <td>
+                        <label class="visually-hidden" for="variant-brush">Set contents for Sable Brush Set</label>
+                        <select id="variant-brush" name="variant-brush">
+                          <option value="012" selected>Sizes 0, 1 and 2</option>
+                          <option value="000-0">Sizes 000, 00 and 0</option>
+                        </select>
+                      </td>
+                      <td class="is-numeric">A$34.50</td>
+                      <td>
+                        <span class="qty-control">
+                          <label class="visually-hidden" for="qty-brush">Quantity of Sable Brush Set</label>
+                          <input type="number" id="qty-brush" name="qty-brush" value="1" min="1" max="8" step="1">
+                        </span>
+                      </td>
+                      <td class="is-numeric">A$34.50</td>
+                      <td>
+                        <a class="button button--small button--icon button--danger" href="cart.html" aria-label="Remove Sable Brush Set from cart">
+                          <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+                            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M4 6.5h16M9.5 6.5V4h5v2.5"/>
+                              <path d="M6.5 6.5 7.5 20h9l1-13.5"/>
+                              <path d="M10.5 10v6M13.5 10v6"/>
+                            </g>
+                          </svg>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+
+                  <tfoot>
+                    <tr>
+                      <th scope="row" colspan="4">Subtotal</th>
+                      <td class="is-numeric">A$85.49</td>
+                      <td></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </section>
+
+            <div class="form__actions">
+              <a class="button button--primary" href="cart.html">Update cart</a>
+              <a class="button button--quiet" href="catalogue.html">Continue shopping</a>
+            </div>
+          </form>
+
+          <section class="section" aria-labelledby="promo-heading">
+            <div class="section__head">
+              <h2 id="promo-heading">Discount code</h2>
+            </div>
+            <form class="form">
+              <div class="form__grid form__grid--two">
+                <p class="field">
+                  <label class="field__label" for="promo-code">Discount code</label>
+                  <input type="text" id="promo-code" name="promo-code" autocomplete="off" aria-describedby="promo-code-hint">
+                  <span class="field__hint" id="promo-code-hint">One code per order. Codes are not case sensitive.</span>
+                </p>
+              </div>
+              <div class="form__actions">
+                <a class="button" href="cart.html">Apply code</a>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <aside class="layout-aside__side" aria-labelledby="totals-heading">
+          <div class="panel">
+            <h2 class="panel__title" id="totals-heading">Order summary</h2>
+            <dl class="summary-list">
+              <div class="summary-list__row">
+                <dt>Subtotal</dt>
+                <dd>A$85.49</dd>
+              </div>
+              <div class="summary-list__row">
+                <dt>Delivery (standard)</dt>
+                <dd>A$9.95</dd>
+              </div>
+              <div class="summary-list__row">
+                <dt>GST included</dt>
+                <dd>A$8.68</dd>
+              </div>
+              <div class="summary-list__row summary-list__row--total">
+                <dt>Total</dt>
+                <dd>A$95.44</dd>
+              </div>
+            </dl>
+            <p class="mt-m">
+              <a class="button button--primary button--block" href="checkout.html">Continue to checkout</a>
+            </p>
+          </div>
+
+          <div class="callout">
+            <h2 class="callout__title">Delivery</h2>
+            <p class="text-small">
+              Standard delivery arrives in three to six business days. Orders over
+              A$120.00 are delivered free within Australia.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

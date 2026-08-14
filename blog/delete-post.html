@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete your post — Grimdark Forge blog</title>
+  <meta name="description" content="Confirm deletion of a blog post you wrote on Grimdark Forge. Only posts belonging to the signed-in account can be deleted.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="posts.html">Blog</a></li>
+          <li><a href="post.html">A basing recipe that takes four minutes</a></li>
+          <li aria-current="page">Delete</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Delete your post?</h1>
+          <p class="page-head__lede">
+            This cannot be undone. Check the post below before confirming.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout callout--danger">
+        <h2 class="callout__title">Nine comments will be deleted with it</h2>
+        <p>
+          This post has 9 comments and has been read 412 times. Deleting it removes
+          the comments as well, and any link to it from the forum or another post
+          will stop working. If you only want to correct something, edit it instead.
+        </p>
+      </div>
+
+      <section class="section" aria-labelledby="target-heading">
+        <div class="section__head">
+          <h2 id="target-heading">The post you are about to delete</h2>
+        </div>
+
+        <article class="post post--mine">
+          <div class="post__head">
+            <h3 class="post__title">A basing recipe that takes four minutes a model</h3>
+            <span class="badge badge--primary">Your post</span>
+          </div>
+
+          <p class="byline">
+            <img class="byline__avatar" src="../assets/img/avatar-kaya.svg" alt="">
+            <span class="byline__name">Kaya Ellery</span>
+            <time datetime="2026-07-24">24 July 2026</time>
+          </p>
+
+          <ul class="tag-list">
+            <li><span class="tag">Basing</span></li>
+            <li><span class="tag">Beginner</span></li>
+          </ul>
+
+          <div class="prose">
+            <p>
+              Bases are the cheapest way to make a unit look finished, and the
+              slowest way to lose a weekend if you overcomplicate them.
+            </p>
+            <p>
+              The recipe is four steps: texture paste, a wash, a drybrush, then two
+              tufts placed off-centre. Nothing here needs a second coat, and the
+              whole batch dries while you eat lunch.
+            </p>
+          </div>
+
+          <figure class="post__figure">
+            <img class="post__image" src="../assets/img/photo-basing.svg" alt="Three finished bases side by side showing gravel, static grass and a broken paving slab.">
+            <figcaption>The header image will be deleted with the post.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="confirm-heading">
+        <div class="section__head">
+          <h2 id="confirm-heading">Confirm deletion</h2>
+        </div>
+
+        <form class="form">
+          <fieldset class="fieldset">
+            <legend class="fieldset__legend">Why are you deleting this?</legend>
+
+            <p class="field">
+              <label class="field__label" for="delete-reason">Reason</label>
+              <select id="delete-reason" name="delete-reason" aria-describedby="delete-reason-hint">
+                <option value="" selected>Prefer not to say</option>
+                <option value="outdated">The technique is out of date</option>
+                <option value="wrong">The information was wrong</option>
+                <option value="duplicate">Superseded by another post</option>
+                <option value="rewrite">Rewriting it from scratch</option>
+              </select>
+              <span class="field__hint" id="delete-reason-hint">Only visible to staff. Helps spot tutorials that need replacing rather than removing.</span>
+            </p>
+
+            <p class="field field--inline">
+              <input type="checkbox" id="delete-confirm" name="delete-confirm" required aria-describedby="delete-confirm-hint">
+              <label class="field__label" for="delete-confirm">I understand this permanently deletes the post, its image and its 9 comments</label>
+            </p>
+            <span class="field__hint" id="delete-confirm-hint">Required. Deleted posts are not recoverable by staff.</span>
+          </fieldset>
+
+          <div class="form__actions">
+            <a class="button button--danger-solid" href="posts.html">
+              <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 6.5h16M9.5 6.5V4h5v2.5"/>
+                  <path d="M6.5 6.5 7.5 20h9l1-13.5"/>
+                  <path d="M10.5 10v6M13.5 10v6"/>
+                </g>
+              </svg>
+              Delete post permanently
+            </a>
+            <a class="button" href="edit-post.html">Edit it instead</a>
+            <a class="button button--quiet" href="post.html">Cancel and go back</a>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start a thread — Grimdark Forge forum</title>
+  <meta name="description" content="Start a new discussion thread on the Grimdark Forge forum: choose a board, write a title and opening post, and attach an image.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="boards.html">Forum</a></li>
+          <li aria-current="page">Start a thread</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Start a thread</h1>
+          <p class="page-head__lede">
+            Posting as Kaya Ellery. Give the thread a title people can search for.
+          </p>
+        </div>
+      </div>
+
+      <div class="layout-aside">
+        <div>
+          <form class="form">
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Thread details</legend>
+
+              <p class="field">
+                <label class="field__label" for="thread-title">Thread title <span class="field__required" aria-hidden="true">*</span></label>
+                <input type="text" id="thread-title" name="thread-title" required aria-describedby="thread-title-hint">
+                <span class="field__hint" id="thread-title-hint">Between 10 and 90 characters. Say what the thread is about, not how you feel about it.</span>
+              </p>
+
+              <div class="form__grid form__grid--two">
+                <p class="field">
+                  <label class="field__label" for="thread-board">Board <span class="field__required" aria-hidden="true">*</span></label>
+                  <select id="thread-board" name="thread-board" required aria-describedby="thread-board-hint">
+                    <option value="" selected>Choose a board</option>
+                    <option value="rules">Rules and errata</option>
+                    <option value="lists">Army lists</option>
+                    <option value="painting">Painting</option>
+                    <option value="terrain">Terrain</option>
+                    <option value="wip">Work in progress</option>
+                    <option value="events">Events and tournaments</option>
+                  </select>
+                  <span class="field__hint" id="thread-board-hint">Threads in the wrong board get moved, not deleted.</span>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="thread-tag">Optional tag</label>
+                  <select id="thread-tag" name="thread-tag">
+                    <option value="" selected>No tag</option>
+                    <option value="question">Question</option>
+                    <option value="discussion">Discussion</option>
+                    <option value="showcase">Showcase</option>
+                    <option value="tutorial">Tutorial</option>
+                  </select>
+                </p>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Opening post</legend>
+
+              <p class="field">
+                <label class="field__label" for="thread-body">Post text <span class="field__required" aria-hidden="true">*</span></label>
+                <textarea id="thread-body" name="thread-body" required aria-describedby="thread-body-hint"></textarea>
+                <span class="field__hint" id="thread-body-hint">Plain text. If you are asking about a rule, quote the exact wording and the page number.</span>
+              </p>
+
+              <div class="field">
+                <label class="field__label" for="thread-image">Attach an image</label>
+                <span class="file-field">
+                  <img class="file-field__preview" src="../assets/img/photo-workbench.svg" alt="Preview of the currently selected image: a painting workbench with brushes and paint pots.">
+                  <input type="file" id="thread-image" name="thread-image" accept="image/*" aria-describedby="thread-image-hint">
+                </span>
+                <span class="field__hint" id="thread-image-hint">JPEG or PNG, up to 4 MB. Describe what the image shows in your post text.</span>
+              </div>
+
+              <p class="field field--inline">
+                <input type="checkbox" id="thread-notify" name="thread-notify" checked>
+                <label class="field__label" for="thread-notify">Email me when someone replies to this thread</label>
+              </p>
+            </fieldset>
+
+            <div class="form__actions">
+              <a class="button button--primary" href="thread.html">Post thread</a>
+              <button type="button" class="button">Save draft</button>
+              <a class="button button--quiet" href="boards.html">Cancel</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="layout-aside__side" aria-labelledby="guidelines-heading">
+          <div class="panel">
+            <h2 class="panel__title" id="guidelines-heading">Before you post</h2>
+            <div class="prose">
+              <ul>
+                <li>Search first — rules questions are usually answered already.</li>
+                <li>One question per thread. Two questions get one answer.</li>
+                <li>Photograph models in daylight if you want useful painting feedback.</li>
+                <li>Disagree with the argument, not the person.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout--primary">
+            <h2 class="callout__title">You can edit this later</h2>
+            <p class="text-small">
+              Threads you start stay editable from the thread page. You cannot edit or
+              delete posts written by anyone else.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

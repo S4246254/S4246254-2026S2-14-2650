@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Grimdark Forge shop</title>
+  <meta name="description" content="Enter delivery and payment details to complete your Grimdark Forge order. Every field is labelled and carries the appropriate autocomplete attribute.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html" aria-current="page">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="catalogue.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li aria-current="page">Checkout</li>
+        </ol>
+      </nav>
+
+      <ol class="steps">
+        <li class="steps__item steps__item--done">1. Cart</li>
+        <li class="steps__item" aria-current="step">2. Checkout</li>
+        <li class="steps__item">3. Confirmation</li>
+      </ol>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Checkout</h1>
+          <p class="page-head__lede">
+            Fields marked with an asterisk are required.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <h2 class="callout__title">No payment is taken on this page</h2>
+        <p>
+          This checkout does not charge a card and does not send your details
+          anywhere. Please do not enter real card details — use the test values
+          shown beneath each field.
+        </p>
+      </div>
+
+      <div class="layout-aside">
+        <div>
+          <form class="form">
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Contact details</legend>
+
+              <div class="form__grid form__grid--two">
+                <p class="field">
+                  <label class="field__label" for="contact-name">Full name <span class="field__required" aria-hidden="true">*</span></label>
+                  <input type="text" id="contact-name" name="contact-name" autocomplete="name" required>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="contact-email">Email address <span class="field__required" aria-hidden="true">*</span></label>
+                  <input type="email" id="contact-email" name="contact-email" autocomplete="email" required aria-describedby="contact-email-hint">
+                  <span class="field__hint" id="contact-email-hint">Your order confirmation and tracking link are sent here.</span>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="contact-phone">Phone number</label>
+                  <input type="tel" id="contact-phone" name="contact-phone" autocomplete="tel" aria-describedby="contact-phone-hint">
+                  <span class="field__hint" id="contact-phone-hint">Used only if the courier cannot find the address.</span>
+                </p>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Delivery address</legend>
+
+              <div class="form__grid form__grid--two">
+                <p class="field">
+                  <label class="field__label" for="delivery-street">Street address <span class="field__required" aria-hidden="true">*</span></label>
+                  <input type="text" id="delivery-street" name="delivery-street" autocomplete="address-line1" required>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="delivery-street2">Apartment, unit or level</label>
+                  <input type="text" id="delivery-street2" name="delivery-street2" autocomplete="address-line2">
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="delivery-suburb">Suburb <span class="field__required" aria-hidden="true">*</span></label>
+                  <input type="text" id="delivery-suburb" name="delivery-suburb" autocomplete="address-level2" required>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="delivery-state">State or territory <span class="field__required" aria-hidden="true">*</span></label>
+                  <select id="delivery-state" name="delivery-state" autocomplete="address-level1" required>
+                    <option value="" selected>Choose a state or territory</option>
+                    <option value="act">Australian Capital Territory</option>
+                    <option value="nsw">New South Wales</option>
+                    <option value="nt">Northern Territory</option>
+                    <option value="qld">Queensland</option>
+                    <option value="sa">South Australia</option>
+                    <option value="tas">Tasmania</option>
+                    <option value="vic">Victoria</option>
+                    <option value="wa">Western Australia</option>
+                  </select>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="delivery-postcode">Postcode <span class="field__required" aria-hidden="true">*</span></label>
+                  <input type="text" id="delivery-postcode" name="delivery-postcode" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{4}" required aria-describedby="delivery-postcode-hint">
+                  <span class="field__hint" id="delivery-postcode-hint">Four digits, for example 3000.</span>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="delivery-country">Country <span class="field__required" aria-hidden="true">*</span></label>
+                  <select id="delivery-country" name="delivery-country" autocomplete="country" required>
+                    <option value="au" selected>Australia</option>
+                    <option value="nz">New Zealand</option>
+                  </select>
+                </p>
+              </div>
+
+              <p class="field">
+                <label class="field__label" for="delivery-notes">Delivery instructions</label>
+                <textarea id="delivery-notes" name="delivery-notes" aria-describedby="delivery-notes-hint"></textarea>
+                <span class="field__hint" id="delivery-notes-hint">For example, a safe place to leave the parcel if nobody is home.</span>
+              </p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Delivery method</legend>
+
+              <p class="field field--inline">
+                <input type="radio" id="ship-standard" name="shipping" value="standard" checked>
+                <label class="field__label" for="ship-standard">Standard, three to six business days — A$9.95</label>
+              </p>
+
+              <p class="field field--inline">
+                <input type="radio" id="ship-express" name="shipping" value="express">
+                <label class="field__label" for="ship-express">Express, one to two business days — A$17.95</label>
+              </p>
+
+              <p class="field field--inline">
+                <input type="radio" id="ship-pickup" name="shipping" value="pickup">
+                <label class="field__label" for="ship-pickup">Collect in store, ready within four hours — free</label>
+              </p>
+            </fieldset>
+
+            <!-- Payment fields deliberately carry autocomplete="off" rather than the
+                 cc-name / cc-number / cc-exp / cc-csc tokens used elsewhere on this
+                 form. Those tokens are what prompt a browser to offer the reader's
+                 real stored card, and this is a demonstration store that must never
+                 receive real card data. The trade-off is that these four fields no
+                 longer meet WCAG 2.1 success criterion 1.3.5 Identify Input Purpose;
+                 every other field on the page still does. -->
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Payment</legend>
+
+              <div class="form__grid form__grid--two">
+                <p class="field">
+                  <label class="field__label" for="card-name">Name on card <span class="field__required" aria-hidden="true">*</span></label>
+                  <input type="text" id="card-name" name="card-name" autocomplete="off" required>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="card-number">Card number <span class="field__required" aria-hidden="true">*</span></label>
+                  <input type="text" id="card-number" name="card-number" autocomplete="off" inputmode="numeric" required aria-describedby="card-number-hint">
+                  <span class="field__hint" id="card-number-hint">Use the test number 4111 1111 1111 1111. Never enter a real card number.</span>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="card-expiry">Expiry date <span class="field__required" aria-hidden="true">*</span></label>
+                  <input type="text" id="card-expiry" name="card-expiry" autocomplete="off" placeholder="MM/YY" required aria-describedby="card-expiry-hint">
+                  <span class="field__hint" id="card-expiry-hint">Two-digit month and year, for example 04/29.</span>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="card-csc">Security code <span class="field__required" aria-hidden="true">*</span></label>
+                  <input type="text" id="card-csc" name="card-csc" autocomplete="off" inputmode="numeric" required aria-describedby="card-csc-hint">
+                  <span class="field__hint" id="card-csc-hint">Three digits on the back of the card. Use 123.</span>
+                </p>
+              </div>
+
+              <p class="field field--inline">
+                <input type="checkbox" id="billing-same" name="billing-same" checked>
+                <label class="field__label" for="billing-same">My billing address is the same as my delivery address</label>
+              </p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Confirm your order</legend>
+
+              <p class="field field--inline">
+                <input type="checkbox" id="terms" name="terms" required aria-describedby="terms-hint">
+                <label class="field__label" for="terms">I accept the terms of sale and the returns policy</label>
+              </p>
+              <span class="field__hint" id="terms-hint">Required. Unopened kits may be returned within 30 days.</span>
+
+              <p class="field field--inline">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label class="field__label" for="newsletter">Email me when new kits and paints arrive</label>
+              </p>
+            </fieldset>
+
+            <div class="form__actions">
+              <a class="button button--primary" href="order-confirmation.html">Place order — A$95.44</a>
+              <a class="button button--quiet" href="cart.html">Back to cart</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="layout-aside__side" aria-labelledby="summary-heading">
+          <div class="panel">
+            <h2 class="panel__title" id="summary-heading">Order summary</h2>
+
+            <ul class="footer-nav__list">
+              <li>
+                <span>Ironclad Sentinel &times; 1</span>
+                <span class="sitemap-tree__note">Siege cannon — A$42.00</span>
+              </li>
+              <li>
+                <span>Oxide Wash &times; 1</span>
+                <span class="sitemap-tree__note">30 ml pot — A$8.99</span>
+              </li>
+              <li>
+                <span>Sable Brush Set &times; 1</span>
+                <span class="sitemap-tree__note">Sizes 0, 1 and 2 — A$34.50</span>
+              </li>
+            </ul>
+
+            <dl class="summary-list mt-m">
+              <div class="summary-list__row">
+                <dt>Subtotal</dt>
+                <dd>A$85.49</dd>
+              </div>
+              <div class="summary-list__row">
+                <dt>Delivery (standard)</dt>
+                <dd>A$9.95</dd>
+              </div>
+              <div class="summary-list__row">
+                <dt>GST included</dt>
+                <dd>A$8.68</dd>
+              </div>
+              <div class="summary-list__row summary-list__row--total">
+                <dt>Total</dt>
+                <dd>A$95.44</dd>
+              </div>
+            </dl>
+
+            <p class="mt-m"><a href="cart.html">Edit your cart</a></p>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

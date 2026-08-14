@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit your review — Grimdark Forge</title>
+  <meta name="description" content="Edit a review you wrote on Grimdark Forge. Only reviews belonging to the signed-in account can be edited.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="review.html">Still holding a point after six months</a></li>
+          <li aria-current="page">Edit</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Edit your review</h1>
+          <p class="page-head__lede">
+            Your review of the <a href="../shop/product.html">Sable Brush Set</a>,
+            written <time datetime="2026-08-05">5 August 2026</time>.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout callout--primary">
+        <h2 class="callout__title">You are editing your own review</h2>
+        <p>
+          This review was written by Kaya Ellery, the signed-in account, so it can be
+          edited here. Reviews by other customers offer <strong>Helpful</strong> and
+          <strong>Report</strong> instead of <strong>Edit</strong> and
+          <strong>Delete</strong>, and this page is not reachable for them.
+        </p>
+      </div>
+
+      <div class="layout-aside">
+        <div>
+          <form class="form">
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Product</legend>
+
+              <p class="field">
+                <label class="field__label" for="review-product">Product reviewed</label>
+                <input type="text" id="review-product" name="review-product" value="Sable Brush Set" readonly aria-describedby="review-product-hint">
+                <span class="field__hint" id="review-product-hint">The product cannot be changed after publishing. Delete this review and write a new one if you picked the wrong item.</span>
+              </p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Your rating <span class="field__required" aria-hidden="true">*</span></legend>
+
+              <div class="star-choice">
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-1" name="rating" value="1" required>
+                  <label for="rating-1">1 star — poor</label>
+                </span>
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-2" name="rating" value="2">
+                  <label for="rating-2">2 stars — below average</label>
+                </span>
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-3" name="rating" value="3">
+                  <label for="rating-3">3 stars — acceptable</label>
+                </span>
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-4" name="rating" value="4">
+                  <label for="rating-4">4 stars — good</label>
+                </span>
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-5" name="rating" value="5" checked>
+                  <label for="rating-5">5 stars — excellent</label>
+                </span>
+              </div>
+
+              <p class="field__hint">Currently 5 stars. Changing this recalculates the product's average.</p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Your review</legend>
+
+              <p class="field">
+                <label class="field__label" for="review-title">Headline <span class="field__required" aria-hidden="true">*</span></label>
+                <input type="text" id="review-title" name="review-title" value="Still holding a point after six months" required>
+              </p>
+
+              <p class="field">
+                <label class="field__label" for="review-body">Full review <span class="field__required" aria-hidden="true">*</span></label>
+                <textarea id="review-body" name="review-body" required aria-describedby="review-body-hint">I have wrecked cheaper brushes in a month. These have done a whole army and the size 1 still comes to a point straight out of the water.
+
+The size 2 is the one I reach for most, which surprised me — I expected to live on the 0. Wash them properly and reshape the tip each time and they last.</textarea>
+                <span class="field__hint" id="review-body-hint">Edited reviews are marked as edited with the date, so readers know the rating may have changed.</span>
+              </p>
+
+              <div class="field">
+                <label class="field__label" for="review-image">Replace the photograph</label>
+                <span class="file-field">
+                  <img class="file-field__preview" src="../assets/img/brush-set.svg" alt="Preview of the current photograph: three wooden-handled brushes laid side by side in descending size.">
+                  <input type="file" id="review-image" name="review-image" accept="image/*" aria-describedby="review-image-hint">
+                </span>
+                <span class="field__hint" id="review-image-hint">Leave empty to keep the current photograph.</span>
+              </div>
+
+              <p class="field">
+                <label class="field__label" for="review-image-alt">Photograph description</label>
+                <input type="text" id="review-image-alt" name="review-image-alt" value="Three wooden-handled brushes laid side by side in descending size, with their bristles pointed to fine tips.">
+              </p>
+            </fieldset>
+
+            <div class="form__actions">
+              <a class="button button--primary" href="review.html">Save changes</a>
+              <a class="button button--quiet" href="review.html">Cancel</a>
+              <a class="button button--danger" href="delete-review.html">Delete this review</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="layout-aside__side" aria-labelledby="impact-heading">
+          <div class="panel">
+            <h2 class="panel__title" id="impact-heading">Effect of your rating</h2>
+            <p class="text-small text-muted">
+              The Sable Brush Set currently averages 5 out of 5 from 41 reviews. Your
+              review is one of them.
+            </p>
+            <p class="rating mt-s">
+              <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-5">★★★★★</span></span>
+              <span class="rating__value">5 out of 5, from 41 reviews</span>
+            </p>
+          </div>
+
+          <div class="panel">
+            <h2 class="panel__title">Edit history</h2>
+            <ul class="footer-nav__list">
+              <li>
+                <span>Published</span>
+                <span class="sitemap-tree__note"><time datetime="2026-08-05T17:20">5 August 2026 at 5:20 pm</time></span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

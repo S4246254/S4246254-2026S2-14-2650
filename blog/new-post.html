@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Write a post — Grimdark Forge blog</title>
+  <meta name="description" content="Write a new post for the Grimdark Forge blog: title, summary, tags, body text and a header image.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="posts.html">Blog</a></li>
+          <li aria-current="page">Write a post</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Write a post</h1>
+          <p class="page-head__lede">
+            Publishing as Kaya Ellery. Posts appear in the blog index immediately.
+          </p>
+        </div>
+      </div>
+
+      <div class="layout-aside">
+        <div>
+          <form class="form">
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">The post</legend>
+
+              <p class="field">
+                <label class="field__label" for="post-title">Title <span class="field__required" aria-hidden="true">*</span></label>
+                <input type="text" id="post-title" name="post-title" required aria-describedby="post-title-hint">
+                <span class="field__hint" id="post-title-hint">Between 10 and 90 characters. Say what the reader will learn.</span>
+              </p>
+
+              <p class="field">
+                <label class="field__label" for="post-summary">Summary <span class="field__required" aria-hidden="true">*</span></label>
+                <input type="text" id="post-summary" name="post-summary" required aria-describedby="post-summary-hint">
+                <span class="field__hint" id="post-summary-hint">One or two sentences, shown on the preview card in the index.</span>
+              </p>
+
+              <p class="field">
+                <label class="field__label" for="post-body">Post text <span class="field__required" aria-hidden="true">*</span></label>
+                <textarea id="post-body" name="post-body" required aria-describedby="post-body-hint"></textarea>
+                <span class="field__hint" id="post-body-hint">Plain text. Use a blank line between paragraphs. Tutorials read better with short sections and a heading each.</span>
+              </p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Header image</legend>
+
+              <div class="field">
+                <label class="field__label" for="post-image">Choose an image</label>
+                <span class="file-field">
+                  <img class="file-field__preview" src="../assets/img/photo-workbench.svg" alt="Preview of the currently selected image: a painting workbench with brushes and paint pots.">
+                  <input type="file" id="post-image" name="post-image" accept="image/*" aria-describedby="post-image-hint">
+                </span>
+                <span class="field__hint" id="post-image-hint">JPEG or PNG, up to 4 MB. Landscape images crop better on the index cards.</span>
+              </div>
+
+              <p class="field">
+                <label class="field__label" for="post-image-alt">Image description <span class="field__required" aria-hidden="true">*</span></label>
+                <input type="text" id="post-image-alt" name="post-image-alt" required aria-describedby="post-image-alt-hint">
+                <span class="field__hint" id="post-image-alt-hint">Describe what the image shows, for readers using a screen reader. Required whenever an image is attached.</span>
+              </p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Publishing</legend>
+
+              <div class="form__grid form__grid--two">
+                <p class="field">
+                  <label class="field__label" for="post-tag">Primary tag <span class="field__required" aria-hidden="true">*</span></label>
+                  <select id="post-tag" name="post-tag" required>
+                    <option value="" selected>Choose a tag</option>
+                    <option value="painting">Painting</option>
+                    <option value="basing">Basing</option>
+                    <option value="terrain">Terrain</option>
+                    <option value="events">Events</option>
+                    <option value="beginner">Beginner</option>
+                  </select>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="post-date">Publish date</label>
+                  <input type="date" id="post-date" name="post-date" value="2026-08-14" aria-describedby="post-date-hint">
+                  <span class="field__hint" id="post-date-hint">Leave as today to publish now.</span>
+                </p>
+              </div>
+
+              <p class="field field--inline">
+                <input type="checkbox" id="post-comments" name="post-comments" checked>
+                <label class="field__label" for="post-comments">Allow comments on this post</label>
+              </p>
+            </fieldset>
+
+            <div class="form__actions">
+              <a class="button button--primary" href="post.html">Publish post</a>
+              <button type="button" class="button">Save draft</button>
+              <a class="button button--quiet" href="posts.html">Cancel</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="layout-aside__side" aria-labelledby="guide-heading">
+          <div class="panel">
+            <h2 class="panel__title" id="guide-heading">Writing a good tutorial</h2>
+            <div class="prose">
+              <ul>
+                <li>Say what the reader will be able to do at the end.</li>
+                <li>One technique per post. Split anything longer.</li>
+                <li>Photograph in daylight, and show the failure as well as the success.</li>
+                <li>Name the exact paints and brushes you used.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout--primary">
+            <h2 class="callout__title">Image descriptions are required</h2>
+            <p class="text-small">
+              Every attached image needs a description. It is what readers using a
+              screen reader get instead of the picture, and it is also what appears
+              if the image fails to load.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="posts.html">Blog</a></li>
+          <li><a href="../reviews/reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

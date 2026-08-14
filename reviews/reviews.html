@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reviews — Grimdark Forge</title>
+  <meta name="description" content="Customer reviews and star ratings for Grimdark Forge products. Filter by product, rating, reviewer or date.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li aria-current="page">Reviews</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Reviews and ratings</h1>
+          <p class="page-head__lede">
+            Written by customers, not by us. 1,284 reviews across 143 products.
+          </p>
+        </div>
+        <div class="page-head__actions">
+          <a class="button button--primary" href="new-review.html">Write a review</a>
+        </div>
+      </div>
+
+      <div class="layout-aside layout-aside--side-first">
+        <aside class="layout-aside__side" aria-labelledby="breakdown-heading">
+          <div class="panel">
+            <h2 class="panel__title" id="breakdown-heading">Overall rating</h2>
+            <p class="rating">
+              <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-pct-83">★★★★★</span></span>
+              <span class="rating__value">4.1 out of 5, from 1,284 reviews</span>
+            </p>
+
+            <dl class="rating-bars mt-m">
+              <div class="rating-bars__row">
+                <dt>5 stars</dt>
+                <dd class="rating-bars__track"><span class="rating-bars__fill is-pct-47"></span></dd>
+                <dd>600</dd>
+              </div>
+              <div class="rating-bars__row">
+                <dt>4 stars</dt>
+                <dd class="rating-bars__track"><span class="rating-bars__fill is-pct-31"></span></dd>
+                <dd>400</dd>
+              </div>
+              <div class="rating-bars__row">
+                <dt>3 stars</dt>
+                <dd class="rating-bars__track"><span class="rating-bars__fill is-pct-14"></span></dd>
+                <dd>180</dd>
+              </div>
+              <div class="rating-bars__row">
+                <dt>2 stars</dt>
+                <dd class="rating-bars__track"><span class="rating-bars__fill is-pct-6"></span></dd>
+                <dd>70</dd>
+              </div>
+              <div class="rating-bars__row">
+                <dt>1 star</dt>
+                <dd class="rating-bars__track"><span class="rating-bars__fill is-pct-3"></span></dd>
+                <dd>34</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="callout callout--primary">
+            <h2 class="callout__title">Only verified purchases</h2>
+            <p class="text-small">
+              A review can only be written against an order on your account, which is
+              why the count is lower than the number of products sold.
+            </p>
+          </div>
+        </aside>
+
+        <div>
+          <section class="filter-bar" aria-labelledby="filter-heading">
+            <h2 class="visually-hidden" id="filter-heading">Filter reviews</h2>
+            <form class="filter-bar__form" action="reviews.html" method="get">
+              <div class="filter-bar__grid">
+                <p class="field">
+                  <label class="field__label" for="filter-product">Product title contains</label>
+                  <input type="search" id="filter-product" name="product" placeholder="e.g. oxide" aria-describedby="filter-product-hint">
+                  <span class="field__hint" id="filter-product-hint">Matches the product the review is about.</span>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="filter-rating">Minimum rating</label>
+                  <select id="filter-rating" name="rating">
+                    <option value="" selected>Any rating</option>
+                    <option value="5">5 stars only</option>
+                    <option value="4">4 stars and above</option>
+                    <option value="3">3 stars and above</option>
+                    <option value="2">2 stars and above</option>
+                  </select>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="filter-reviewer">Reviewer</label>
+                  <select id="filter-reviewer" name="reviewer">
+                    <option value="" selected>Anyone</option>
+                    <option value="oksana">Oksana Reyes</option>
+                    <option value="kaya">Kaya Ellery</option>
+                    <option value="toma">Toma Brandt</option>
+                    <option value="renn">Renn Vasco</option>
+                  </select>
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="filter-from">Written from</label>
+                  <input type="date" id="filter-from" name="from" value="2026-01-01">
+                </p>
+
+                <div class="filter-bar__actions">
+                  <button type="submit" class="button button--primary">Apply</button>
+                  <button type="reset" class="button button--quiet">Reset</button>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <div class="result-summary">
+            <p>Showing 4 of 1,284 reviews, newest first.</p>
+            <p>Page 1 of 321</p>
+          </div>
+
+          <section aria-labelledby="list-heading">
+            <h2 class="visually-hidden" id="list-heading">Reviews</h2>
+
+            <ul class="comment-list">
+              <li>
+                <article class="comment">
+                  <p class="rating">
+                    <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-45">★★★★★</span></span>
+                    <span class="rating__value">4.5 out of 5</span>
+                  </p>
+                  <h3 class="card__title"><a href="review.html">Oxide Wash does one job and does it properly</a></h3>
+                  <p class="card__meta">
+                    <a href="../shop/product.html">Oxide Wash, 30 ml</a>
+                    <span class="badge badge--success">Verified purchase</span>
+                  </p>
+                  <p class="byline">
+                    <img class="byline__avatar" src="../assets/img/avatar-oksana.svg" alt="">
+                    <a class="byline__name" href="../account.html">Oksana Reyes</a>
+                    <time datetime="2026-07-28">28 July 2026</time>
+                  </p>
+                  <div class="prose">
+                    <p>
+                      Two pots through a full squad of vehicles. It flows into panel
+                      lines without pooling in the flat areas, which is the whole
+                      point and is where cheaper washes fail.
+                    </p>
+                  </div>
+                  <div class="post__actions">
+                    <a href="review.html">Read the full review</a>
+                    <button type="button" class="button button--small button--quiet">Report</button>
+                    <span class="ownership-note">By Oksana Reyes</span>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="comment post--mine">
+                  <p class="rating">
+                    <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-5">★★★★★</span></span>
+                    <span class="rating__value">5 out of 5</span>
+                  </p>
+                  <h3 class="card__title"><a href="review.html">Still holding a point after six months</a></h3>
+                  <p class="card__meta">
+                    <a href="../shop/product.html">Sable Brush Set</a>
+                    <span class="badge badge--success">Verified purchase</span>
+                    <span class="badge badge--primary">Your review</span>
+                  </p>
+                  <p class="byline">
+                    <img class="byline__avatar" src="../assets/img/avatar-kaya.svg" alt="">
+                    <a class="byline__name" href="../account.html">Kaya Ellery</a>
+                    <time datetime="2026-08-05">5 August 2026</time>
+                  </p>
+                  <div class="prose">
+                    <p>
+                      I have wrecked cheaper brushes in a month. These have done a
+                      whole army and the size 1 still comes to a point straight out
+                      of the water.
+                    </p>
+                  </div>
+                  <div class="post__actions">
+                    <a href="review.html">Read the full review</a>
+                    <a class="button button--small" href="edit-review.html">Edit</a>
+                    <a class="button button--small button--danger" href="delete-review.html">Delete</a>
+                    <span class="ownership-note">By you</span>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="comment">
+                  <p class="rating">
+                    <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-3">★★★★★</span></span>
+                    <span class="rating__value">3 out of 5</span>
+                  </p>
+                  <h3 class="card__title"><a href="review.html">Covers well, but you have to thin it</a></h3>
+                  <p class="card__meta">
+                    <a href="../shop/product.html">Bone Ivory, 30 ml</a>
+                    <span class="badge badge--success">Verified purchase</span>
+                  </p>
+                  <p class="byline">
+                    <img class="byline__avatar" src="../assets/img/avatar-toma.svg" alt="">
+                    <a class="byline__name" href="../account.html">Toma Brandt</a>
+                    <time datetime="2026-07-19">19 July 2026</time>
+                  </p>
+                  <div class="prose">
+                    <p>
+                      Straight from the pot it goes chalky over black primer, exactly
+                      as the forum thread warned. Thinned properly it is fine, but
+                      three stars because the pot does not say so.
+                    </p>
+                  </div>
+                  <div class="post__actions">
+                    <a href="review.html">Read the full review</a>
+                    <button type="button" class="button button--small button--quiet">Report</button>
+                    <span class="ownership-note">By Toma Brandt</span>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="comment">
+                  <p class="rating">
+                    <span class="rating__stars" aria-hidden="true">★★★★★<span class="rating__stars-fill is-rating-4">★★★★★</span></span>
+                    <span class="rating__value">4 out of 5</span>
+                  </p>
+                  <h3 class="card__title"><a href="review.html">Excellent kit, fiddly ankle joint</a></h3>
+                  <p class="card__meta">
+                    <a href="../shop/product.html">Ironclad Sentinel</a>
+                    <span class="badge badge--success">Verified purchase</span>
+                  </p>
+                  <p class="byline">
+                    <img class="byline__avatar" src="../assets/img/avatar-renn.svg" alt="">
+                    <a class="byline__name" href="../account.html">Renn Vasco</a>
+                    <time datetime="2026-07-02">2 July 2026</time>
+                  </p>
+                  <div class="prose">
+                    <p>
+                      Push-fit everywhere except the ankles, which need clamping while
+                      the cement sets or the model leans. Worth knowing before you
+                      start rather than after.
+                    </p>
+                  </div>
+                  <div class="post__actions">
+                    <a href="review.html">Read the full review</a>
+                    <button type="button" class="button button--small button--quiet">Report</button>
+                    <span class="ownership-note">By Renn Vasco</span>
+                  </div>
+                </article>
+              </li>
+            </ul>
+
+            <nav class="pagination" aria-label="Review pages">
+              <ul class="pagination__list">
+                <li><a class="pagination__link" href="reviews.html" aria-current="page">1</a></li>
+                <li><a class="pagination__link" href="reviews.html">2</a></li>
+                <li><a class="pagination__link" href="reviews.html">3</a></li>
+                <li><a class="pagination__link" href="reviews.html">321</a></li>
+                <li><a class="pagination__link" href="reviews.html">Next page</a></li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

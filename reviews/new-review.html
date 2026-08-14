@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Write a review — Grimdark Forge</title>
+  <meta name="description" content="Write a review of a Grimdark Forge product you have bought. Choose a star rating from a labelled radio group and add your own summary and detail.">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="../welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="../categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="../shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="../account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="../assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="../welcome.html">Home</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li aria-current="page">Write a review</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Write a review</h1>
+          <p class="page-head__lede">
+            Reviewing as Kaya Ellery. You can only review products from an order on
+            your account.
+          </p>
+        </div>
+      </div>
+
+      <div class="layout-aside">
+        <div>
+          <form class="form">
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">What are you reviewing?</legend>
+
+              <p class="field">
+                <label class="field__label" for="review-product">Product <span class="field__required" aria-hidden="true">*</span></label>
+                <select id="review-product" name="review-product" required aria-describedby="review-product-hint">
+                  <option value="" selected>Choose from your orders</option>
+                  <option value="sentinel">Ironclad Sentinel — ordered 14 August 2026</option>
+                  <option value="oxide">Oxide Wash, 30 ml — ordered 14 August 2026</option>
+                  <option value="brushes">Sable Brush Set — ordered 14 August 2026</option>
+                  <option value="rulebook">Rules of Engagement — ordered 2 May 2026</option>
+                </select>
+                <span class="field__hint" id="review-product-hint">Only products you have bought appear here. This is what makes a review show as a verified purchase.</span>
+              </p>
+            </fieldset>
+
+            <!-- The star rating is a radio group inside a fieldset with a legend, not
+                 an image or a set of clickable stars. Each option has a real text
+                 label, so the value is available to a screen reader and can be
+                 chosen with the keyboard alone. -->
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Your rating <span class="field__required" aria-hidden="true">*</span></legend>
+
+              <div class="star-choice">
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-1" name="rating" value="1" required>
+                  <label for="rating-1">1 star — poor</label>
+                </span>
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-2" name="rating" value="2">
+                  <label for="rating-2">2 stars — below average</label>
+                </span>
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-3" name="rating" value="3">
+                  <label for="rating-3">3 stars — acceptable</label>
+                </span>
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-4" name="rating" value="4">
+                  <label for="rating-4">4 stars — good</label>
+                </span>
+                <span class="star-choice__option">
+                  <input type="radio" id="rating-5" name="rating" value="5">
+                  <label for="rating-5">5 stars — excellent</label>
+                </span>
+              </div>
+
+              <p class="field__hint">Required. Half stars are averaged across reviews and cannot be chosen individually.</p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Your review</legend>
+
+              <p class="field">
+                <label class="field__label" for="review-title">Headline <span class="field__required" aria-hidden="true">*</span></label>
+                <input type="text" id="review-title" name="review-title" required aria-describedby="review-title-hint">
+                <span class="field__hint" id="review-title-hint">One line summarising your verdict. This is what appears in the review list.</span>
+              </p>
+
+              <p class="field">
+                <label class="field__label" for="review-body">Full review <span class="field__required" aria-hidden="true">*</span></label>
+                <textarea id="review-body" name="review-body" required aria-describedby="review-body-hint"></textarea>
+                <span class="field__hint" id="review-body-hint">At least 50 characters. The most useful reviews say how much you used, what you compared it against, and what you would tell someone before they buy.</span>
+              </p>
+
+              <div class="field">
+                <label class="field__label" for="review-image">Add a photograph</label>
+                <span class="file-field">
+                  <img class="file-field__preview" src="../assets/img/photo-army.svg" alt="Preview of the currently selected image: a rank of painted miniatures photographed from the front.">
+                  <input type="file" id="review-image" name="review-image" accept="image/*" aria-describedby="review-image-hint">
+                </span>
+                <span class="field__hint" id="review-image-hint">Optional. JPEG or PNG, up to 4 MB. Photographs of the product in use are more useful than photographs of the box.</span>
+              </div>
+
+              <p class="field">
+                <label class="field__label" for="review-image-alt">Photograph description</label>
+                <input type="text" id="review-image-alt" name="review-image-alt" aria-describedby="review-image-alt-hint">
+                <span class="field__hint" id="review-image-alt-hint">Required if you attach a photograph. Describe what it shows for readers using a screen reader.</span>
+              </p>
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <legend class="fieldset__legend">Publishing</legend>
+
+              <p class="field field--inline">
+                <input type="checkbox" id="review-guidelines" name="review-guidelines" required aria-describedby="review-guidelines-hint">
+                <label class="field__label" for="review-guidelines">This review is my own experience of the product</label>
+              </p>
+              <span class="field__hint" id="review-guidelines-hint">Required. Reviews written for products you have not used are removed.</span>
+
+              <p class="field field--inline">
+                <input type="checkbox" id="review-notify" name="review-notify" checked>
+                <label class="field__label" for="review-notify">Email me if someone replies to my review</label>
+              </p>
+            </fieldset>
+
+            <div class="form__actions">
+              <a class="button button--primary" href="review.html">Publish review</a>
+              <button type="button" class="button">Save draft</button>
+              <a class="button button--quiet" href="reviews.html">Cancel</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="layout-aside__side" aria-labelledby="tips-heading">
+          <div class="panel">
+            <h2 class="panel__title" id="tips-heading">What makes a review useful</h2>
+            <div class="prose">
+              <ul>
+                <li>Say how much you used and over how long.</li>
+                <li>Compare it to something else you have tried.</li>
+                <li>Name the thing that nearly stopped you buying it.</li>
+                <li>Rate the product, not the delivery.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout--primary">
+            <h2 class="callout__title">You can edit this later</h2>
+            <p class="text-small">
+              Reviews you write stay editable from the review page. You cannot edit or
+              delete reviews written by anyone else.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="../forum/boards.html">Forum</a></li>
+          <li><a href="../blog/posts.html">Blog</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="../account.html">Account</a></li>
+          <li><a href="../sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
