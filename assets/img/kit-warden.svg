@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="400" height="400" fill="#dddfe4"/>
+  <circle cx="200" cy="200" r="150" fill="#d4dbdd"/>
+
+  <!-- Three infantry silhouettes with shields -->
+  <g stroke="#91a19c" stroke-width="4" stroke-linejoin="round">
+    <!-- Rear-left trooper -->
+    <g fill="#c6d2d0">
+      <path d="M78 306v-84a22 22 0 0 1 44 0v84z"/>
+      <circle cx="100" cy="200" r="19"/>
+      <path d="M100 182l9 16h-18z" fill="#468c60" stroke="none"/>
+      <path d="M52 210h34v76H52z"/>
+    </g>
+    <!-- Rear-right trooper -->
+    <g fill="#c6d2d0">
+      <path d="M278 306v-84a22 22 0 0 1 44 0v84z"/>
+      <circle cx="300" cy="200" r="19"/>
+      <path d="M300 182l9 16h-18z" fill="#468c60" stroke="none"/>
+      <path d="M314 210h34v76h-34z"/>
+    </g>
+    <!-- Champion, front and centre -->
+    <g fill="#b6c7c4">
+      <path d="M162 316v-102a26 26 0 0 1 52 0v102z"/>
+      <circle cx="188" cy="188" r="23"/>
+      <path d="M132 196h42v96h-42z"/>
+      <path d="M228 200l24-70 12 4-22 72z"/>
+    </g>
+  </g>
+
+  <!-- Visors -->
+  <g fill="#ebedf1">
+    <rect x="88" y="196" width="24" height="7" rx="3"/>
+    <rect x="288" y="196" width="24" height="7" rx="3"/>
+    <rect x="174" y="182" width="28" height="8" rx="4"/>
+  </g>
+
+  <!-- Shield heraldry -->
+  <g fill="#396bb7">
+    <circle cx="69" cy="244" r="9"/>
+    <circle cx="331" cy="244" r="9"/>
+    <path d="M153 226l16 30h-32z"/>
+  </g>
+
+  <!-- Bases -->
+  <g fill="#c8ccd4" stroke="#a0a7b3" stroke-width="3">
+    <ellipse cx="100" cy="308" rx="46" ry="12"/>
+    <ellipse cx="300" cy="308" rx="46" ry="12"/>
+    <ellipse cx="188" cy="322" rx="56" ry="14"/>
+  </g>
+</svg>

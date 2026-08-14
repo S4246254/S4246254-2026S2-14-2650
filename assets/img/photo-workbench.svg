@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="640" height="400" fill="#dfe1e5"/>
+  <!-- Wall and desk surface -->
+  <rect width="640" height="250" fill="#d3d6dc"/>
+  <rect y="250" width="640" height="150" fill="#d9d0c7"/>
+  <rect y="250" width="640" height="8" fill="#c5b8a8"/>
+
+  <!-- Desk lamp cone -->
+  <path d="M470 40l150 210H370z" fill="#396bb7" opacity="0.12"/>
+  <g fill="#c8cbd2" stroke="#959ba7" stroke-width="4" stroke-linejoin="round">
+    <path d="M596 44h48l-16 44h-48z"/>
+    <path d="M616 88v150"/>
+  </g>
+  <circle cx="620" cy="86" r="12" fill="#2a5088"/>
+
+  <!-- Row of paint pots -->
+  <g stroke="#959ba7" stroke-width="3">
+    <g fill="#c8cbd2"><rect x="40" y="176" width="44" height="74" rx="6"/></g>
+    <g fill="#c8cbd2"><rect x="96" y="176" width="44" height="74" rx="6"/></g>
+    <g fill="#c8cbd2"><rect x="152" y="176" width="44" height="74" rx="6"/></g>
+    <g fill="#c8cbd2"><rect x="208" y="176" width="44" height="74" rx="6"/></g>
+  </g>
+  <g>
+    <rect x="44" y="212" width="36" height="34" fill="#76ba91"/>
+    <rect x="100" y="204" width="36" height="42" fill="#bb8787"/>
+    <rect x="156" y="220" width="36" height="26" fill="#2a384e"/>
+    <rect x="212" y="200" width="36" height="46" fill="#a6bdcd"/>
+  </g>
+  <g fill="#b3b9c4" stroke="#959ba7" stroke-width="3">
+    <rect x="38" y="162" width="48" height="16" rx="4"/>
+    <rect x="94" y="162" width="48" height="16" rx="4"/>
+    <rect x="150" y="162" width="48" height="16" rx="4"/>
+    <rect x="206" y="162" width="48" height="16" rx="4"/>
+  </g>
+
+  <!-- Wet palette -->
+  <rect x="288" y="204" width="120" height="46" rx="8" fill="#c8ccd4" stroke="#a0a7b3" stroke-width="3"/>
+  <rect x="298" y="212" width="100" height="30" rx="4" fill="#2c333a"/>
+  <g>
+    <circle cx="318" cy="227" r="7" fill="#76ba91"/>
+    <circle cx="342" cy="227" r="6" fill="#bb8787"/>
+    <circle cx="364" cy="227" r="8" fill="#a6bdcd"/>
+    <circle cx="386" cy="227" r="5" fill="#2a384e"/>
+  </g>
+
+  <!-- Miniature in progress on a cork holder -->
+  <g stroke="#a0a7b3" stroke-width="3">
+    <rect x="452" y="212" width="46" height="38" rx="5" fill="#c6b298"/>
+    <g fill="#b2b8c4">
+      <path d="M462 212v-46a13 13 0 0 1 26 0v46z"/>
+      <circle cx="475" cy="158" r="11"/>
+      <path d="M488 178l20-26 6 5-18 27z"/>
+    </g>
+  </g>
+  <rect x="470" y="152" width="12" height="4" rx="2" fill="#396bb7"/>
+
+  <!-- Brush lying on the desk -->
+  <g transform="rotate(-6 300 300)">
+    <rect x="140" y="292" width="180" height="12" rx="6" fill="#bb8787"/>
+    <rect x="316" y="290" width="24" height="16" rx="3" fill="#383f48"/>
+    <path d="M340 290l40 8-40 8z" fill="#8e6c3e"/>
+  </g>
+
+  <!-- Clippers -->
+  <g transform="rotate(24 500 320)" stroke="#a0a7b3" stroke-width="3" fill="#b3b9c4">
+    <rect x="460" y="300" width="96" height="14" rx="7"/>
+    <rect x="460" y="318" width="96" height="14" rx="7"/>
+    <circle cx="558" cy="316" r="9" fill="#396bb7"/>
+  </g>
+</svg>

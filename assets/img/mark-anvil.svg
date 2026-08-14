@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="presentation" focusable="false" aria-hidden="true">
+  <title>Anvil and hammer emblem</title>
+  <g fill="none" stroke="#396bb7" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M8 30h32l10-8v10a8 8 0 0 1-8 8H24z" fill="#dadce1"/>
+    <path d="M26 40v8h14v6H16v-6h6v-8z"/>
+    <path d="M44 10l12 6-6 8-10-6z" fill="#dadce1"/>
+    <path d="M40 18L28 26" stroke-width="2.5"/>
+  </g>
+</svg>

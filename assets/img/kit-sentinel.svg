@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="400" height="400" fill="#dddfe4"/>
+  <circle cx="200" cy="200" r="150" fill="#d2d5dc"/>
+
+  <!-- Walker legs -->
+  <g fill="#c0c5cf" stroke="#a0a7b3" stroke-width="3" stroke-linejoin="round">
+    <path d="M150 320l-14-72 26-8 16 74z"/>
+    <path d="M250 320l14-72-26-8-16 74z"/>
+  </g>
+  <!-- Feet -->
+  <g fill="#b1b7c3">
+    <rect x="126" y="316" width="56" height="14" rx="5"/>
+    <rect x="218" y="316" width="56" height="14" rx="5"/>
+  </g>
+
+  <!-- Hull -->
+  <path d="M136 138h128l14 60-22 54H144l-22-54z" fill="#b2b8c4" stroke="#8a93a2" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- Cockpit visor -->
+  <path d="M164 168h72v26h-72z" fill="#ebedf1"/>
+  <path d="M170 174h60v6h-60z" fill="#396bb7"/>
+
+  <!-- Armour plating seams -->
+  <g stroke="#cdd2da" stroke-width="3">
+    <path d="M136 214h128"/>
+    <path d="M200 214v38"/>
+  </g>
+
+  <!-- Left weapon arm -->
+  <g fill="#c0c5cf" stroke="#8a93a2" stroke-width="4" stroke-linejoin="round">
+    <path d="M122 160h-34v40h34z"/>
+    <path d="M88 168H52v24h36z"/>
+  </g>
+  <rect x="46" y="172" width="10" height="16" rx="3" fill="#396bb7"/>
+
+  <!-- Right power fist -->
+  <g fill="#c0c5cf" stroke="#8a93a2" stroke-width="4" stroke-linejoin="round">
+    <path d="M278 158h32v38h-32z"/>
+    <path d="M310 150h40v56h-40z"/>
+  </g>
+  <g fill="#305d7a" opacity="0.75">
+    <rect x="318" y="162" width="24" height="6" rx="3"/>
+    <rect x="318" y="176" width="24" height="6" rx="3"/>
+    <rect x="318" y="190" width="24" height="6" rx="3"/>
+  </g>
+
+  <!-- Crest -->
+  <path d="M200 108l16 30h-32z" fill="#396bb7"/>
+
+  <!-- Base -->
+  <ellipse cx="200" cy="334" rx="104" ry="20" fill="#e5e7eb"/>
+  <ellipse cx="200" cy="330" rx="104" ry="20" fill="#c8ccd4" stroke="#a0a7b3" stroke-width="3"/>
+</svg>

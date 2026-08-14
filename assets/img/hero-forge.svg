@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="presentation" focusable="false" aria-hidden="true">
+  <defs>
+    <linearGradient id="heroSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dadce1"/>
+      <stop offset="1" stop-color="#e9ebef"/>
+    </linearGradient>
+    <radialGradient id="heroGlow" cx="0.5" cy="0.85" r="0.6">
+      <stop offset="0" stop-color="#396bb7" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#396bb7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="480" fill="url(#heroSky)"/>
+
+  <!-- Distant ruined spires -->
+  <g fill="#dee0e5">
+    <path d="M40 300l24-120 24 120z"/>
+    <path d="M96 300V190l30-26 30 26v110z"/>
+    <path d="M480 300l30-96 30 96z"/>
+    <path d="M556 300V210l24-18 24 18v90z"/>
+  </g>
+  <g fill="#d4d7de">
+    <path d="M160 300V150l52-40 52 40v150z"/>
+    <path d="M300 300V120l40-34 40 34v180z"/>
+    <path d="M400 300V178l36-28 36 28v122z"/>
+  </g>
+
+  <!-- Broken window slits -->
+  <g fill="#edeff2">
+    <rect x="196" y="180" width="16" height="34" rx="8"/>
+    <rect x="228" y="180" width="16" height="34" rx="8"/>
+    <rect x="326" y="150" width="16" height="40" rx="8"/>
+    <rect x="352" y="150" width="16" height="40" rx="8"/>
+    <rect x="424" y="204" width="14" height="30" rx="7"/>
+  </g>
+
+  <!-- Forge glow at the horizon -->
+  <rect x="0" y="180" width="640" height="300" fill="url(#heroGlow)"/>
+
+  <!-- Ground plane -->
+  <path d="M0 300h640v180H0z" fill="#e5e7eb"/>
+  <path d="M0 300h640v6H0z" fill="#396bb7" opacity="0.35"/>
+
+  <!-- Regiment of miniatures in silhouette -->
+  <g fill="#edeff2">
+    <g>
+      <path d="M120 300v-42a14 14 0 0 1 28 0v42z"/>
+      <circle cx="134" cy="246" r="12"/>
+      <path d="M148 268l22-30 6 5-20 31z"/>
+      <rect x="112" y="300" width="44" height="8" rx="3"/>
+    </g>
+    <g>
+      <path d="M204 300v-48a15 15 0 0 1 30 0v48z"/>
+      <circle cx="219" cy="240" r="13"/>
+      <path d="M234 262l24-34 6 5-22 35z"/>
+      <rect x="196" y="300" width="46" height="8" rx="3"/>
+    </g>
+    <g>
+      <path d="M296 300v-56a17 17 0 0 1 34 0v56z"/>
+      <circle cx="313" cy="228" r="15"/>
+      <path d="M330 252l28-40 7 6-26 41z"/>
+      <path d="M296 252l-26 8v10l26-6z"/>
+      <rect x="286" y="300" width="54" height="9" rx="3"/>
+    </g>
+    <g>
+      <path d="M396 300v-48a15 15 0 0 1 30 0v48z"/>
+      <circle cx="411" cy="240" r="13"/>
+      <path d="M396 264l-24-30-6 5 22 31z"/>
+      <rect x="388" y="300" width="46" height="8" rx="3"/>
+    </g>
+    <g>
+      <path d="M478 300v-40a13 13 0 0 1 26 0v40z"/>
+      <circle cx="491" cy="248" r="11"/>
+      <path d="M504 268l20-26 6 5-18 27z"/>
+      <rect x="470" y="300" width="42" height="8" rx="3"/>
+    </g>
+  </g>
+
+  <!-- Rim light along the leading edge of the regiment -->
+  <g fill="none" stroke="#396bb7" stroke-width="2.5" opacity="0.8" stroke-linecap="round">
+    <path d="M148 258v42"/>
+    <path d="M234 250v50"/>
+    <path d="M330 240v60"/>
+    <path d="M426 250v50"/>
+    <path d="M504 258v42"/>
+  </g>
+
+  <!-- Drifting embers -->
+  <g fill="#2a5088">
+    <circle cx="90" cy="360" r="3" opacity="0.9"/>
+    <circle cx="176" cy="404" r="2" opacity="0.7"/>
+    <circle cx="262" cy="346" r="2.5" opacity="0.85"/>
+    <circle cx="368" cy="392" r="3" opacity="0.6"/>
+    <circle cx="452" cy="352" r="2" opacity="0.8"/>
+    <circle cx="548" cy="398" r="2.5" opacity="0.55"/>
+    <circle cx="600" cy="340" r="2" opacity="0.7"/>
+  </g>
+</svg>

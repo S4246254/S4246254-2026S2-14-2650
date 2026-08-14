@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="640" height="400" fill="#dfe1e5"/>
+  <rect width="640" height="400" fill="#d0d6e0"/>
+
+  <!-- Close crop of an armoured shoulder pauldron -->
+  <path d="M120 380V190c0-72 60-130 132-130h96c72 0 132 58 132 130v190z"
+        fill="#b2b8c4" stroke="#778194" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- Panel seams -->
+  <g stroke="#cdd2da" stroke-width="6" fill="none">
+    <path d="M120 268h360"/>
+    <path d="M300 60v320"/>
+  </g>
+
+  <!-- Edge highlight being applied along the top-left rim -->
+  <path d="M132 380V190c0-64 52-118 116-124"
+        fill="none" stroke="#394555" stroke-width="7" stroke-linecap="round"/>
+  <path d="M132 380V240" fill="none" stroke="#1a324c" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Brass trim on the lower panel -->
+  <rect x="140" y="292" width="320" height="16" rx="8" fill="#396bb7"/>
+  <rect x="140" y="292" width="320" height="5" rx="2" fill="#2a5088"/>
+
+  <!-- Rivets -->
+  <g fill="#8a93a2" stroke="#626c7b" stroke-width="3">
+    <circle cx="176" cy="336" r="12"/>
+    <circle cx="248" cy="348" r="12"/>
+    <circle cx="352" cy="348" r="12"/>
+    <circle cx="424" cy="336" r="12"/>
+  </g>
+
+  <!-- Brush tip touching the edge -->
+  <g transform="rotate(-38 500 140)">
+    <rect x="470" y="60" width="26" height="210" rx="12" fill="#bb8787" stroke="#e1e3e7" stroke-width="4"/>
+    <rect x="468" y="36" width="30" height="26" rx="4" fill="#383f48" stroke="#e1e3e7" stroke-width="4"/>
+    <path d="M483 -22l16 60h-32z" fill="#8e6c3e" stroke="#e1e3e7" stroke-width="4"/>
+  </g>
+
+  <!-- Loaded paint on the tip -->
+  <circle cx="452" cy="184" r="8" fill="#1a324c"/>
+</svg>

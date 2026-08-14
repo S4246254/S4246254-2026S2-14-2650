@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="400" height="400" fill="#dddfe4"/>
+  <circle cx="200" cy="200" r="150" fill="#d8d4df"/>
+
+  <!-- Hardback standing at a slight angle -->
+  <g stroke="#8a93a2" stroke-width="4" stroke-linejoin="round">
+    <path d="M112 78h176v244H112z" fill="#c1b7ce"/>
+    <path d="M112 78l-24 18v244l24-18z" fill="#d2cbdc"/>
+    <path d="M88 340h176l24-18H112z" fill="#dbd5e4"/>
+  </g>
+
+  <!-- Page block edges -->
+  <g stroke="#5f6570" stroke-width="2" opacity="0.6">
+    <path d="M288 92v238M282 96v234M276 100v230"/>
+  </g>
+
+  <!-- Embossed sigil on the cover -->
+  <g fill="none" stroke="#396bb7" stroke-width="5" stroke-linejoin="round">
+    <path d="M200 128l52 34v54c0 34-24 58-52 70-28-12-52-36-52-70v-54z"/>
+    <path d="M200 168v76"/>
+    <path d="M172 196h56"/>
+  </g>
+
+  <!-- Corner protectors -->
+  <g fill="#396bb7" opacity="0.85">
+    <path d="M118 84h30l-30 24z"/>
+    <path d="M282 316h-30l30-24z"/>
+  </g>
+
+  <ellipse cx="200" cy="352" rx="118" ry="14" fill="#e5e7eb" opacity="0.7"/>
+</svg>

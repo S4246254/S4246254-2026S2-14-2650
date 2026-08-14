@@ -1,0 +1,1247 @@
+/* ==========================================================================
+   Grimdark Forge — components.css
+   Reusable pieces shared by all four modules: buttons, cards, forms,
+   filter bars, tables, badges, star ratings, pagination, threads.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Buttons
+   Rendered as <button> for inert controls and <a class="button"> for
+   controls that navigate. Both share one visual definition.
+   -------------------------------------------------------------------------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs) var(--space-s);
+  min-height: 2.75rem;         /* comfortable touch target */
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background-color: var(--surface-high);
+  color: var(--ink);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.button:hover {
+  background-color: var(--line);
+  border-color: var(--primary-line);
+  color: var(--ink-strong);
+}
+
+.button__icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex: none;
+}
+
+.button--primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;              /* 6.4:1 against the primary fill */
+}
+
+.button--primary:hover {
+  background-color: var(--primary-strong);
+  border-color: var(--primary-strong);
+  color: #ffffff;
+}
+
+.button--quiet {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--ink-muted);
+}
+
+.button--quiet:hover {
+  background-color: var(--surface);
+  border-color: var(--line);
+  color: var(--ink-strong);
+}
+
+.button--danger {
+  border-color: var(--danger-line);
+  color: var(--danger);
+  background-color: transparent;
+}
+
+.button--danger:hover {
+  background-color: var(--danger-line);
+  color: var(--ink-strong);
+  border-color: var(--danger);
+}
+
+.button--danger-solid {
+  background-color: var(--danger);
+  border-color: var(--danger);
+  color: #ffffff;              /* 6.1:1 against the danger fill */
+}
+
+.button--danger-solid:hover {
+  background-color: #8f2029;
+  border-color: #8f2029;
+  color: #ffffff;
+}
+
+.button--small {
+  min-height: 2.25rem;
+  padding: var(--space-3xs) var(--space-2xs);
+  font-size: var(--step--1);
+}
+
+.button--block {
+  width: 100%;
+}
+
+/* Icon-only buttons carry their accessible name via aria-label. */
+.button--icon {
+  padding: var(--space-2xs);
+  min-width: 2.75rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  align-items: center;
+}
+
+.button-row--end {
+  justify-content: flex-end;
+}
+
+/* --------------------------------------------------------------------------
+   2. Cards
+   -------------------------------------------------------------------------- */
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__media {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--sunken);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.card__body {
+  padding: var(--space-s);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  flex: 1;
+}
+
+.card__title {
+  font-size: var(--step-1);
+  margin: 0;
+}
+
+.card__title a {
+  text-decoration: none;
+  color: var(--ink-strong);
+}
+
+.card__title a:hover {
+  color: var(--primary-strong);
+  text-decoration: underline;
+}
+
+.card__meta {
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3xs) var(--space-2xs);
+  align-items: center;
+}
+
+.card__summary {
+  color: var(--ink);
+  margin: 0;
+}
+
+.card__footer {
+  margin-top: auto;
+  padding-top: var(--space-2xs);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xs);
+}
+
+/* Panel — a card without media, used for sidebars and summaries */
+.panel {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: var(--space-s);
+}
+
+.panel__title {
+  font-size: var(--step-1);
+  margin-bottom: var(--space-2xs);
+}
+
+.panel + .panel {
+  margin-top: var(--space-m);
+}
+
+/* Callout — for informational notes such as the demo-account explainer */
+.callout {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--info);
+  background-color: var(--surface);
+  border-radius: var(--radius-m);
+  padding: var(--space-s);
+}
+
+.callout--primary { border-left-color: var(--primary); }
+.callout--success { border-left-color: var(--success); }
+.callout--danger { border-left-color: var(--danger); }
+
+.callout__title {
+  font-size: var(--step-0);
+  font-family: var(--font-body);
+  font-weight: 700;
+  margin-bottom: var(--space-3xs);
+}
+
+/* --------------------------------------------------------------------------
+   3. Badges, tags and pills
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding: 0.1rem var(--space-2xs);
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background-color: var(--surface-high);
+  color: var(--ink);
+  font-size: var(--step--1);
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.badge--primary  { border-color: var(--primary-line);   color: var(--primary); }
+.badge--success{ border-color: var(--success-line); color: var(--success); }
+.badge--danger { border-color: var(--danger-line);  color: var(--danger); }
+.badge--info { border-color: var(--info-line);             color: var(--info); }
+
+/* Tag list used by the blog and reviews */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.1rem var(--space-2xs);
+  border-radius: var(--radius-s);
+  border: 1px solid var(--line);
+  background-color: var(--sunken);
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+  text-decoration: none;
+}
+
+.tag:hover {
+  color: var(--primary-strong);
+  border-color: var(--primary-line);
+}
+
+/* Byline — avatar, author name and timestamp */
+.byline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+
+.byline__avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  flex: none;
+  border: 1px solid var(--line);
+}
+
+.byline__name {
+  color: var(--ink-strong);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.byline__name:hover {
+  color: var(--primary-strong);
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   4. Star ratings
+   Rendered as text characters, never as an image, so the value is available
+   to screen readers and can be localised later. The <meter>-style visual is
+   built from two stacked spans; the accessible value lives in the
+   visually-hidden text beside it.
+   -------------------------------------------------------------------------- */
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: var(--step-0);
+}
+
+.rating__stars {
+  position: relative;
+  display: inline-block;
+  color: var(--line);
+  letter-spacing: 0.1em;
+  font-family: var(--font-body);
+}
+
+/* Filled stars are neutral rather than brand-coloured: blue stars read as a
+   link, and the brand colour is reserved for interactive elements. The value
+   is always stated in adjacent text, so colour carries no information. */
+.rating__stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--ink-strong);
+}
+
+.rating__value {
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+
+/* Fill widths for whole and half stars out of five */
+.is-rating-5   { width: 100%; }
+.is-rating-45  { width: 90%; }
+.is-rating-4   { width: 80%; }
+.is-rating-35  { width: 70%; }
+.is-rating-3   { width: 60%; }
+.is-rating-25  { width: 50%; }
+.is-rating-2   { width: 40%; }
+.is-rating-15  { width: 30%; }
+.is-rating-1   { width: 20%; }
+
+/* Percentage widths for the rating breakdown bars. The is-rating-* classes above
+   move in 10% steps, which is too coarse for real proportions, so these are
+   derived from the actual review counts. */
+.is-pct-83 { width: 83%; }
+.is-pct-47 { width: 47%; }
+.is-pct-31 { width: 31%; }
+.is-pct-14 { width: 14%; }
+.is-pct-6  { width: 6%; }
+.is-pct-3  { width: 3%; }
+
+/* Rating breakdown bars on the reviews landing page */
+.rating-bars {
+  display: grid;
+  gap: var(--space-2xs);
+  margin: 0;
+}
+
+.rating-bars__row {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr 3rem;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: var(--step--1);
+}
+
+.rating-bars__track {
+  height: 0.6rem;
+  background-color: var(--sunken);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.rating-bars__fill {
+  display: block;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+/* Star radio group used on the review composer */
+.star-choice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+
+.star-choice__option {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding: var(--space-3xs) var(--space-2xs);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background-color: var(--sunken);
+}
+
+.star-choice__option:hover {
+  border-color: var(--primary-line);
+}
+
+/* The native radio stays visible so focus and checked state are obvious
+   without any scripting. */
+.star-choice__option input {
+  accent-color: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   5. Forms
+   -------------------------------------------------------------------------- */
+.form {
+  display: grid;
+  gap: var(--space-m);
+}
+
+.form__grid {
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: 1fr;
+}
+
+.field {
+  display: grid;
+  gap: var(--space-3xs);
+}
+
+.field__label {
+  font-weight: 600;
+  color: var(--ink-strong);
+  font-size: var(--step--1);
+  letter-spacing: 0.02em;
+}
+
+.field__required {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.field__hint {
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+
+.field__control,
+.field select,
+.field textarea,
+.field input {
+  width: 100%;
+  padding: var(--space-2xs) var(--space-xs);
+  min-height: 2.75rem;
+  background-color: var(--sunken);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  color: var(--ink);
+}
+
+.field textarea {
+  min-height: 9rem;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--ink-muted);              /* 4.6:1 on the sunken fill */
+}
+
+.field input:hover,
+.field select:hover,
+.field textarea:hover {
+  border-color: var(--primary-line);
+}
+
+.field input[type="checkbox"],
+.field input[type="radio"] {
+  width: auto;
+  min-height: 0;
+  accent-color: var(--primary);
+}
+
+.field--inline {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.field--inline .field__label {
+  order: 2;
+  font-weight: 400;
+  font-size: var(--step-0);
+  color: var(--ink);
+}
+
+.fieldset {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: var(--space-s);
+  margin: 0;
+  display: grid;
+  gap: var(--space-s);
+}
+
+.fieldset__legend {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  color: var(--ink-strong);
+  padding-inline: var(--space-2xs);
+}
+
+.form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  align-items: center;
+  padding-top: var(--space-s);
+  border-top: 1px solid var(--line);
+}
+
+/* File input rows for image attachments */
+.file-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.file-field__preview {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--line);
+  background-color: var(--sunken);
+  flex: none;
+}
+
+/* --------------------------------------------------------------------------
+   6. Filter / sort bar
+   Present in every module's listing page. Non-functional at this stage but
+   fully marked up, with a label bound to every control.
+   -------------------------------------------------------------------------- */
+.filter-bar {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: var(--space-s);
+  margin-bottom: var(--space-l);
+}
+
+.filter-bar__grid {
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: 1fr;
+  align-items: end;
+}
+
+.filter-bar__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+
+.result-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-m);
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+}
+
+/* --------------------------------------------------------------------------
+   7. Tables (cart lines, order summaries)
+   -------------------------------------------------------------------------- */
+.data-table {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  background-color: var(--surface);
+}
+
+.data-table caption {
+  text-align: left;
+  padding: var(--space-s);
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+  border-bottom: 1px solid var(--line);
+}
+
+.data-table th,
+.data-table td {
+  padding: var(--space-xs) var(--space-2xs);
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+@media (min-width: 48em) {
+  .data-table th,
+  .data-table td {
+    padding: var(--space-s) var(--space-xs);
+  }
+}
+
+.data-table thead th {
+  background-color: var(--sunken);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.data-table tfoot td,
+.data-table tfoot th {
+  background-color: var(--sunken);
+  border-top: 1px solid var(--line);
+  border-bottom: 0;
+}
+
+.data-table .is-numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* On narrow screens the cart table scrolls horizontally inside its own
+   wrapper so the page body never scrolls sideways. */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Definition-list style summary used for totals and order details */
+.summary-list {
+  display: grid;
+  gap: var(--space-2xs);
+  margin: 0;
+}
+
+.summary-list__row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-s);
+  font-size: var(--step-0);
+}
+
+.summary-list__row dt {
+  color: var(--ink-muted);
+}
+
+.summary-list__row dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-list__row--total {
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-2xs);
+  margin-top: var(--space-2xs);
+  font-size: var(--step-1);
+  font-weight: 700;
+}
+
+.summary-list__row--total dt,
+.summary-list__row--total dd {
+  color: var(--ink-strong);
+}
+
+/* --------------------------------------------------------------------------
+   8. Pagination
+   -------------------------------------------------------------------------- */
+.pagination {
+  margin-top: var(--space-xl);
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding-inline: var(--space-2xs);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background-color: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--step--1);
+}
+
+.pagination__link:hover {
+  border-color: var(--primary);
+  color: var(--primary-strong);
+}
+
+.pagination__link[aria-current="page"] {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   9. Forum threads
+   -------------------------------------------------------------------------- */
+.thread-list {
+  display: grid;
+  gap: var(--space-2xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.thread-row {
+  display: grid;
+  gap: var(--space-2xs);
+  padding: var(--space-s);
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+}
+
+.thread-row:hover {
+  border-color: var(--primary-line);
+}
+
+.thread-row__title {
+  font-size: var(--step-1);
+  margin: 0;
+}
+
+.thread-row__title a {
+  color: var(--ink-strong);
+  text-decoration: none;
+}
+
+.thread-row__title a:hover {
+  color: var(--primary-strong);
+  text-decoration: underline;
+}
+
+.thread-row__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3xs) var(--space-s);
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+  align-items: center;
+}
+
+.thread-row__stats {
+  display: flex;
+  gap: var(--space-s);
+  font-variant-numeric: tabular-nums;
+}
+
+.thread-row__thumb {
+  width: 100%;
+  max-width: 6rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--line-soft);
+}
+
+/* Nested reply tree. Indentation is applied with a left rule so the
+   hierarchy is visible without relying on colour alone. */
+.reply-tree,
+.reply-tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-m);
+}
+
+.reply-tree ul {
+  margin-top: var(--space-m);
+  padding-left: var(--space-s);
+  border-left: 2px solid var(--line);
+}
+
+.post {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: var(--space-s);
+  display: grid;
+  gap: var(--space-2xs);
+}
+
+.post--opening {
+  border-color: var(--primary-line);
+  background-color: var(--surface-high);
+}
+
+.post--mine {
+  border-left: 4px solid var(--primary);
+}
+
+.post__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xs);
+}
+
+.post__title {
+  font-size: var(--step-1);
+  margin: 0;
+}
+
+.post__figure {
+  margin: var(--space-2xs) 0 0;
+}
+
+.post__image {
+  width: 100%;
+  max-width: 26rem;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--line-soft);
+}
+
+.post__figure figcaption {
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+  margin-top: var(--space-3xs);
+}
+
+.post__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  padding-top: var(--space-2xs);
+  border-top: 1px solid var(--line-soft);
+  align-items: center;
+}
+
+/* Marks content that belongs to the signed-in demo user. Paired with the
+   "Your post" badge so ownership is never signalled by colour alone. */
+.ownership-note {
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+  margin-left: auto;
+}
+
+/* --------------------------------------------------------------------------
+   10. Product and shop pieces
+   -------------------------------------------------------------------------- */
+.price {
+  font-size: var(--step-1);
+  font-weight: 700;
+  color: var(--ink-strong);
+  font-variant-numeric: tabular-nums;
+}
+
+.price--was {
+  font-size: var(--step--1);
+  font-weight: 400;
+  color: var(--ink-muted);
+  text-decoration: line-through;
+  margin-left: var(--space-3xs);
+}
+
+.stock {
+  font-size: var(--step--1);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+}
+
+.stock--in { color: var(--success); }
+.stock--low { color: var(--primary); }
+.stock--out { color: var(--danger); }
+
+.product-gallery {
+  display: grid;
+  gap: var(--space-2xs);
+}
+
+.product-gallery__main {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-l);
+  border: 1px solid var(--line);
+  background-color: var(--surface);
+}
+
+.product-gallery__thumbs {
+  display: flex;
+  gap: var(--space-2xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.product-gallery__thumb {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--line);
+  background-color: var(--surface);
+}
+
+.spec-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2xs) var(--space-s);
+  margin: 0;
+  font-size: var(--step-0);
+}
+
+.spec-list dt {
+  color: var(--ink-muted);
+}
+
+.spec-list dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+.cart-line__media {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--line-soft);
+  flex: none;
+}
+
+/* No min-width here. A floor on this cell pushed the cart table wider than the
+   content column beside the order-summary sidebar, which clipped the line-total
+   and remove columns out of view at 1280px. The thumbnail already sets a
+   sensible floor, and the product name wraps. */
+.cart-line__identity {
+  display: flex;
+  gap: var(--space-2xs);
+  align-items: flex-start;
+}
+
+.cart-line__name {
+  font-weight: 600;
+  color: var(--ink-strong);
+  text-decoration: none;
+}
+
+.cart-line__name:hover {
+  color: var(--primary-strong);
+  text-decoration: underline;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+}
+
+.qty-control input {
+  width: 4.5rem;
+  text-align: center;
+}
+
+/* Checkout progress trail — an ordered list, not a decorative graphic */
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  list-style: none;
+  margin: 0 0 var(--space-l);
+  padding: 0;
+  counter-reset: step;
+  font-size: var(--step--1);
+}
+
+.steps__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs) var(--space-s);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background-color: var(--surface);
+  color: var(--ink-muted);
+}
+
+.steps__item[aria-current="step"] {
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.steps__item--done {
+  color: var(--success);
+  border-color: var(--success-line);
+}
+
+/* --------------------------------------------------------------------------
+   11. Hero and feature strips (welcome page)
+   -------------------------------------------------------------------------- */
+.hero {
+  display: grid;
+  gap: var(--space-l);
+  align-items: center;
+  padding: var(--space-l) 0 var(--space-xl);
+}
+
+.hero__title {
+  font-size: var(--step-4);
+}
+
+.hero__lede {
+  color: var(--ink-muted);
+  font-size: var(--step-1);
+  max-width: 46ch;
+  margin-top: var(--space-s);
+}
+
+/* The hero image is a photograph with its own intrinsic ratio; width and
+   height attributes on the element reserve the space so the page does not
+   shift as it loads. */
+.hero__art {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-l);
+  border: 1px solid var(--line);
+  background-color: var(--surface);
+}
+
+.module-card {
+  display: grid;
+  gap: var(--space-2xs);
+  padding: var(--space-m);
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  height: 100%;
+}
+
+.module-card__icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--primary);
+}
+
+.module-card__title {
+  font-size: var(--step-2);
+  margin: 0;
+}
+
+.module-card__title a {
+  color: var(--ink-strong);
+  text-decoration: none;
+}
+
+.module-card__title a:hover {
+  color: var(--primary-strong);
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   12. Account switcher
+   -------------------------------------------------------------------------- */
+.account-grid {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.account-card {
+  display: grid;
+  gap: var(--space-2xs);
+  justify-items: center;
+  text-align: center;
+  padding: var(--space-m);
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  height: 100%;
+}
+
+.account-card--active {
+  border-color: var(--primary);
+  background-color: var(--surface-high);
+}
+
+.account-card__avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 2px solid var(--primary-line);
+}
+
+.account-card__name {
+  font-size: var(--step-1);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   13. Sitemap tree
+   -------------------------------------------------------------------------- */
+.sitemap-tree,
+.sitemap-tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2xs);
+}
+
+.sitemap-tree ul {
+  margin-top: var(--space-2xs);
+  padding-left: var(--space-s);
+  border-left: 2px solid var(--line);
+}
+
+.sitemap-tree a {
+  font-weight: 600;
+}
+
+.sitemap-tree__note {
+  display: block;
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   14. Comments (blog)
+   -------------------------------------------------------------------------- */
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-m);
+}
+
+.comment {
+  display: grid;
+  gap: var(--space-2xs);
+  padding: var(--space-s);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  background-color: var(--surface);
+}
+
+/* --------------------------------------------------------------------------
+   15. Breakpoints
+   -------------------------------------------------------------------------- */
+@media (min-width: 30em) { /* 480px */
+  .form__grid--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .account-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .thread-row {
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    column-gap: var(--space-s);
+  }
+
+  .thread-row__thumb {
+    grid-row: span 3;
+  }
+}
+
+@media (min-width: 48em) { /* 768px */
+  .filter-bar__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .filter-bar__actions {
+    grid-column: 1 / -1;
+  }
+
+  .account-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .form__grid--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-xl);
+    align-items: start;
+  }
+}
+
+@media (min-width: 64em) { /* 1024px */
+  .filter-bar__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  }
+
+  .filter-bar__actions {
+    grid-column: auto;
+  }
+}

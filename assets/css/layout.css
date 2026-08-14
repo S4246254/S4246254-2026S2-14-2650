@@ -1,0 +1,380 @@
+/* ==========================================================================
+   Grimdark Forge — layout.css
+   Site shell (header, primary nav, footer) and page-level grids.
+   Mobile-first; breakpoints at 480px, 768px and 1024px.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Shell wrapper
+   -------------------------------------------------------------------------- */
+.shell {
+  width: 100%;
+  max-width: var(--shell-max);
+  margin-inline: auto;
+  padding-inline: var(--shell-pad);
+}
+
+/* --------------------------------------------------------------------------
+   2. Site header
+   One row: wordmark, primary navigation, then cart and login.
+   -------------------------------------------------------------------------- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background-color: var(--ground);
+}
+
+.site-header__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs) var(--space-m);
+  padding-block: var(--space-s);
+}
+
+.wordmark {
+  font-size: var(--step-1);
+  font-weight: 700;
+  color: var(--ink-strong);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  margin-right: auto;
+}
+
+.wordmark:hover {
+  color: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   3. Primary navigation
+   -------------------------------------------------------------------------- */
+.primary-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.primary-nav__link {
+  display: block;
+  padding: var(--space-2xs) var(--space-2xs);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+
+.primary-nav__link:hover {
+  color: var(--primary);
+  border-bottom-color: var(--line);
+}
+
+/* aria-current="page" is the accessible signal; the underline is added so
+   the current page is not indicated by colour alone. */
+.primary-nav__link[aria-current="page"] {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   4. Header utilities — cart and login
+   -------------------------------------------------------------------------- */
+.site-header__utility {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  color: var(--ink);
+  text-decoration: none;
+  padding: var(--space-3xs);
+}
+
+.cart-link:hover {
+  color: var(--primary);
+}
+
+.cart-link__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+}
+
+/* The count is decorative duplication — the link's aria-label already states
+   how many items are in the cart. */
+.cart-link__count {
+  min-width: 1.25rem;
+  padding-inline: 0.3rem;
+  border-radius: 999px;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: var(--step--1);
+  font-weight: 600;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+/* The header names the signed-in account rather than offering "Login", so the
+   current user is identifiable from every page without opening account.html.
+   The avatar is decorative (alt="") because the name sits beside it. */
+.account-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding: var(--space-3xs);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.account-link__avatar {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex: none;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+}
+
+.account-link__name {
+  white-space: nowrap;
+  font-size: var(--step--1);
+}
+
+.account-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.account-link[aria-current="page"] {
+  color: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   5. Main region
+   -------------------------------------------------------------------------- */
+.site-main {
+  flex: 1 0 auto;
+  padding-block: var(--space-l) var(--space-2xl);
+}
+
+/* Breadcrumb trail */
+.breadcrumb {
+  margin-bottom: var(--space-m);
+  font-size: var(--step--1);
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--ink-muted);
+}
+
+.breadcrumb__list li + li::before {
+  content: "/";
+  margin-right: var(--space-3xs);
+  color: var(--line);
+}
+
+/* Page masthead: h1 plus supporting line and page-level actions */
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-s);
+  margin-bottom: var(--space-l);
+  padding-bottom: var(--space-s);
+  border-bottom: 1px solid var(--line);
+}
+
+.page-head__text {
+  max-width: var(--measure);
+}
+
+.page-head__lede {
+  color: var(--ink-muted);
+  margin-top: var(--space-2xs);
+}
+
+.page-head__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+
+/* Section spacing inside main */
+.section + .section {
+  margin-top: var(--space-xl);
+}
+
+.section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-m);
+}
+
+/* --------------------------------------------------------------------------
+   6. Column layouts
+   -------------------------------------------------------------------------- */
+
+/* Content beside a complementary sidebar (filters, order summary) */
+.layout-aside {
+  display: grid;
+  gap: var(--space-l);
+}
+
+.layout-aside__side {
+  align-self: start;
+}
+
+/* Auto-fitting card grids */
+.grid-cards {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: 1fr;
+}
+
+.grid-cards--wide {
+  gap: var(--space-l);
+}
+
+/* --------------------------------------------------------------------------
+   7. Site footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  background-color: var(--surface);
+  padding-block: var(--space-l);
+  margin-top: auto;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-s) var(--space-m);
+}
+
+.site-footer__note {
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+  margin: 0;
+}
+
+.footer-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-m);
+  font-size: var(--step--1);
+}
+
+.footer-nav__list a {
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+
+.footer-nav__list a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* The same list is reused inside page panels, where a stacked layout with a
+   little more room reads better than the footer's inline row. */
+.panel .footer-nav__list {
+  display: grid;
+  gap: var(--space-2xs);
+  font-size: var(--step-0);
+}
+
+.panel .footer-nav__list a {
+  color: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   8. Breakpoints
+   -------------------------------------------------------------------------- */
+@media (min-width: 30em) { /* 480px */
+  :root {
+    --shell-pad: var(--space-m);
+  }
+
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48em) { /* 768px */
+  .primary-nav__link {
+    padding-inline: var(--space-xs);
+  }
+
+  .grid-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-cards--wide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Four-item rows stay 2x2 here rather than 3 + 1, which leaves an orphan. */
+  .grid-cards--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) { /* 1024px */
+  .layout-aside {
+    grid-template-columns: minmax(0, 1fr) 19rem;
+    gap: var(--space-xl);
+  }
+
+  .layout-aside--side-first {
+    grid-template-columns: 17rem minmax(0, 1fr);
+  }
+
+  .layout-aside--side-first .layout-aside__side {
+    order: -1;
+  }
+
+  .grid-cards--wide {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-cards--four {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Print
+   -------------------------------------------------------------------------- */
+@media print {
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .page-head__actions,
+  .filter-bar {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

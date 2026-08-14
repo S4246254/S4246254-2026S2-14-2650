@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="400" height="400" fill="#dddfe4"/>
+  <rect y="300" width="400" height="100" fill="#dcd8d1"/>
+  <rect y="300" width="400" height="6" fill="#c8c1b6"/>
+
+  <!-- The walker, scaled against a coin -->
+  <g fill="#b2b8c4" stroke="#778194" stroke-width="4" stroke-linejoin="round">
+    <path d="M170 300l-10-64 22-6 12 70z"/>
+    <path d="M244 300l10-64-22-6-12 70z"/>
+    <path d="M158 128h108l12 52-18 46h-96l-18-46z"/>
+  </g>
+  <path d="M182 156h60v22h-60z" fill="#ebedf1"/>
+  <rect x="188" y="162" width="48" height="5" fill="#396bb7"/>
+  <path d="M212 104l14 24h-28z" fill="#396bb7"/>
+  <ellipse cx="212" cy="304" rx="76" ry="14" fill="#c8ccd4" stroke="#a0a7b3" stroke-width="3"/>
+
+  <!-- Reference coin standing beside it, roughly a quarter of the height -->
+  <ellipse cx="332" cy="304" rx="34" ry="9" fill="#e5e7eb" opacity="0.7"/>
+  <circle cx="332" cy="256" r="44" fill="#4c678f" stroke="#7a92b6" stroke-width="5"/>
+  <circle cx="332" cy="256" r="32" fill="none" stroke="#7a92b6" stroke-width="3"/>
+  <path d="M332 232l7 14 15 2-11 11 3 15-14-8-14 8 3-15-11-11 15-2z" fill="#7a92b6"/>
+
+  <!-- Height comparison rule, drawn as a bracket rather than a labelled dimension -->
+  <g stroke="#305d7a" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M60 104h20M60 304h20M70 104v200"/>
+    <path d="M70 104l-6 12M70 104l6 12M70 304l-6-12M70 304l6-12"/>
+  </g>
+</svg>

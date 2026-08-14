@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="640" height="400" fill="#dfe1e5"/>
+  <rect width="640" height="180" fill="#d4d8de"/>
+  <rect y="180" width="640" height="220" fill="#d2d6cf"/>
+
+  <!-- Gaming mat grid, receding -->
+  <g stroke="#c1c8bc" stroke-width="2" opacity="0.8">
+    <path d="M0 210h640M0 244h640M0 286h640M0 336h640M0 394h640"/>
+    <path d="M60 180L20 400M160 180L130 400M260 180L250 400M380 180L390 400M480 180L510 400M580 180L620 400"/>
+  </g>
+
+  <!-- Ruined terrain piece, left -->
+  <g fill="#b6bcc5" stroke="#8a93a2" stroke-width="4" stroke-linejoin="round">
+    <path d="M40 300V150h70v30h-22v120z"/>
+    <path d="M110 300V180h44v120z"/>
+  </g>
+  <path d="M56 256v-40a18 18 0 0 1 36 0v40z" fill="#ebedf1"/>
+
+  <!-- Ruined terrain piece, right -->
+  <g fill="#bcc2cb" stroke="#939caa" stroke-width="4" stroke-linejoin="round">
+    <path d="M500 288V176h60v112z"/>
+    <path d="M560 288V196h44v92z"/>
+  </g>
+  <path d="M516 258v-34a15 15 0 0 1 30 0v34z" fill="#ebedf1"/>
+
+  <!-- Central objective marker -->
+  <g>
+    <ellipse cx="320" cy="300" rx="40" ry="14" fill="#c8ccd4" stroke="#a0a7b3" stroke-width="3"/>
+    <path d="M320 250l16 28h-32z" fill="#396bb7"/>
+    <rect x="314" y="272" width="12" height="26" rx="4" fill="#8a93a2"/>
+  </g>
+
+  <!-- Two opposing units advancing -->
+  <g fill="#aeb6c3" stroke="#778194" stroke-width="4" stroke-linejoin="round">
+    <g><path d="M180 320v-56a14 14 0 0 1 28 0v56z"/><circle cx="194" cy="254" r="12"/><path d="M208 278l20-28 6 5-18 29z"/></g>
+    <g><path d="M232 336v-60a15 15 0 0 1 30 0v60z"/><circle cx="247" cy="264" r="13"/><path d="M232 288l-22-28-6 5 20 29z"/></g>
+  </g>
+  <g fill="#c0b3c4" stroke="#8b749c" stroke-width="4" stroke-linejoin="round">
+    <g><path d="M400 320v-56a14 14 0 0 1 28 0v56z"/><circle cx="414" cy="254" r="12"/><path d="M400 278l-20-28-6 5 18 29z"/></g>
+    <g><path d="M452 336v-60a15 15 0 0 1 30 0v60z"/><circle cx="467" cy="264" r="13"/><path d="M482 288l22-28 6 5-20 29z"/></g>
+  </g>
+
+  <!-- Bases -->
+  <g fill="#c8ccd4" stroke="#a0a7b3" stroke-width="3">
+    <ellipse cx="194" cy="318" rx="30" ry="9"/>
+    <ellipse cx="247" cy="334" rx="32" ry="9"/>
+    <ellipse cx="414" cy="318" rx="30" ry="9"/>
+    <ellipse cx="467" cy="334" rx="32" ry="9"/>
+  </g>
+
+  <!-- Dice in the foreground -->
+  <g fill="#396bb7" stroke="#93b1dd" stroke-width="3">
+    <rect x="70" y="348" width="44" height="40" rx="8"/>
+    <rect x="540" y="340" width="40" height="38" rx="8"/>
+  </g>
+  <g fill="#e9edf4">
+    <circle cx="84" cy="362" r="4"/><circle cx="100" cy="362" r="4"/>
+    <circle cx="84" cy="376" r="4"/><circle cx="100" cy="376" r="4"/>
+    <circle cx="560" cy="359" r="4"/>
+  </g>
+</svg>

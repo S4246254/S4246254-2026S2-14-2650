@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="640" height="400" fill="#dfe1e5"/>
+  <defs>
+    <radialGradient id="armyGlow" cx="0.5" cy="0.2" r="0.8">
+      <stop offset="0" stop-color="#305d7a" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#305d7a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#armyGlow)"/>
+
+  <!-- Display shelf, two tiers -->
+  <rect y="196" width="640" height="10" fill="#d1c5b7"/>
+  <rect y="340" width="640" height="10" fill="#d1c5b7"/>
+
+  <!-- Back rank, smaller and darker -->
+  <g fill="#c1c7d2" stroke="#a1aab8" stroke-width="3" stroke-linejoin="round">
+    <g><path d="M52 196v-52a13 13 0 0 1 26 0v52z"/><circle cx="65" cy="136" r="11"/><path d="M78 158l18-24 5 4-16 25z"/></g>
+    <g><path d="M148 196v-56a14 14 0 0 1 28 0v56z"/><circle cx="162" cy="130" r="12"/><path d="M176 154l20-28 6 5-18 29z"/></g>
+    <g><path d="M244 196v-52a13 13 0 0 1 26 0v52z"/><circle cx="257" cy="136" r="11"/><path d="M244 158l-18-24-5 4 16 25z"/></g>
+    <g><path d="M344 196v-58a14 14 0 0 1 28 0v58z"/><circle cx="358" cy="128" r="12"/><path d="M372 152l22-30 6 5-20 31z"/></g>
+    <g><path d="M444 196v-52a13 13 0 0 1 26 0v52z"/><circle cx="457" cy="136" r="11"/><path d="M470 158l18-24 5 4-16 25z"/></g>
+    <g><path d="M540 196v-56a14 14 0 0 1 28 0v56z"/><circle cx="554" cy="130" r="12"/><path d="M540 154l-20-28-6 5 18 29z"/></g>
+  </g>
+  <g fill="#468c60">
+    <circle cx="65" cy="134" r="3"/><circle cx="162" cy="128" r="3"/><circle cx="257" cy="134" r="3"/>
+    <circle cx="358" cy="126" r="3"/><circle cx="457" cy="134" r="3"/><circle cx="554" cy="128" r="3"/>
+  </g>
+
+  <!-- Front rank, larger and lit -->
+  <g fill="#aeb6c3" stroke="#778194" stroke-width="4" stroke-linejoin="round">
+    <g><path d="M76 340v-74a18 18 0 0 1 36 0v74z"/><circle cx="94" cy="256" r="16"/><path d="M112 288l26-38 8 6-24 39z"/></g>
+    <g><path d="M212 340v-82a19 19 0 0 1 38 0v82z"/><circle cx="231" cy="246" r="17"/><path d="M212 282l-28-36-8 6 26 37z"/></g>
+    <g><path d="M356 340v-90a20 20 0 0 1 40 0v90z"/><circle cx="376" cy="238" r="18"/><path d="M396 276l30-44 9 6-28 45z"/><path d="M356 278l-30 10v12l30-8z"/></g>
+    <g><path d="M500 340v-78a18 18 0 0 1 36 0v78z"/><circle cx="518" cy="250" r="16"/><path d="M536 284l26-36 8 6-24 37z"/></g>
+  </g>
+
+  <!-- Brass heraldry and visors -->
+  <g fill="#396bb7">
+    <path d="M94 226l8 14H86z"/><path d="M231 216l8 14h-16z"/>
+    <path d="M376 208l9 16h-18z"/><path d="M518 220l8 14h-16z"/>
+  </g>
+  <g fill="#ebedf1">
+    <rect x="84" y="254" width="20" height="6" rx="3"/>
+    <rect x="221" y="244" width="20" height="6" rx="3"/>
+    <rect x="365" y="236" width="22" height="7" rx="3"/>
+    <rect x="508" y="248" width="20" height="6" rx="3"/>
+  </g>
+
+  <!-- Bases -->
+  <g fill="#c8ccd4" stroke="#a0a7b3" stroke-width="3">
+    <ellipse cx="94" cy="336" rx="42" ry="11"/>
+    <ellipse cx="231" cy="336" rx="44" ry="11"/>
+    <ellipse cx="376" cy="336" rx="48" ry="12"/>
+    <ellipse cx="518" cy="336" rx="42" ry="11"/>
+  </g>
+</svg>

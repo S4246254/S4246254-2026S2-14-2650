@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="400" height="400" fill="#dddfe4"/>
+  <circle cx="200" cy="200" r="150" fill="#dedad5"/>
+
+  <!-- Three brushes fanned out, largest at the back -->
+  <g stroke="#e1e3e7" stroke-width="3" stroke-linejoin="round">
+    <!-- Back brush -->
+    <g transform="rotate(-16 200 200)">
+      <rect x="188" y="120" width="24" height="184" rx="10" fill="#d3bca9"/>
+      <rect x="186" y="98" width="28" height="26" rx="4" fill="#535b64"/>
+      <path d="M200 40l14 58h-28z" fill="#8e6c3e"/>
+      <path d="M200 40l6 30h-12z" fill="#1c304e"/>
+    </g>
+    <!-- Middle brush -->
+    <g>
+      <rect x="188" y="130" width="26" height="190" rx="11" fill="#bb8787"/>
+      <rect x="186" y="106" width="30" height="28" rx="4" fill="#383f48"/>
+      <path d="M201 44l15 62h-30z" fill="#8e6c3e"/>
+      <path d="M201 44l6 32h-12z" fill="#1c304e"/>
+    </g>
+    <!-- Front brush -->
+    <g transform="rotate(15 200 200)">
+      <rect x="188" y="124" width="22" height="180" rx="9" fill="#a6bdcd"/>
+      <rect x="186" y="102" width="26" height="24" rx="4" fill="#535b64"/>
+      <path d="M199 48l12 54h-24z" fill="#8e6c3e"/>
+      <path d="M199 48l5 28h-10z" fill="#1c304e"/>
+    </g>
+  </g>
+
+  <!-- Ferrule bands -->
+  <g fill="#396bb7" opacity="0.9">
+    <rect x="187" y="126" width="28" height="5" rx="2"/>
+  </g>
+
+  <ellipse cx="200" cy="340" rx="110" ry="16" fill="#e5e7eb" opacity="0.7"/>
+</svg>

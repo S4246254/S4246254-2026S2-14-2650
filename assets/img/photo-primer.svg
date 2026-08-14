@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="640" height="400" fill="#dfe1e5"/>
+  <rect width="640" height="400" fill="#d0d4db"/>
+
+  <!-- Cardboard spray booth -->
+  <path d="M60 60h520v290H60z" fill="#d7cec4"/>
+  <path d="M60 60h520l-40 40H100z" fill="#cdc2b4"/>
+  <path d="M100 100h440v250H100z" fill="#d6dce5"/>
+
+  <!-- Three test miniatures, each a different primer result -->
+  <g stroke-width="4" stroke-linejoin="round">
+    <!-- Too thin: patchy grey -->
+    <g fill="#888d94" stroke="#656b74">
+      <path d="M176 300v-70a17 17 0 0 1 34 0v70z"/>
+      <circle cx="193" cy="222" r="15"/>
+      <path d="M210 250l24-34 7 5-22 35z"/>
+    </g>
+    <!-- Just right: even black -->
+    <g fill="#dadce0" stroke="#a0a7b3">
+      <path d="M303 300v-74a18 18 0 0 1 36 0v74z"/>
+      <circle cx="321" cy="218" r="16"/>
+      <path d="M339 248l26-36 7 5-24 37z"/>
+    </g>
+    <!-- Too thick: clogged white -->
+    <g fill="#2d3339" stroke="#263340">
+      <path d="M430 300v-70a17 17 0 0 1 34 0v70z"/>
+      <circle cx="447" cy="222" r="15"/>
+      <path d="M464 250l24-34 7 5-22 35z"/>
+    </g>
+  </g>
+
+  <!-- Detail loss on the over-primed model, shown as softened edges -->
+  <g fill="#2d3339" opacity="0.55">
+    <circle cx="447" cy="238" r="22"/>
+    <circle cx="447" cy="272" r="26"/>
+  </g>
+
+  <!-- Bases -->
+  <g fill="#c8ccd4" stroke="#a0a7b3" stroke-width="3">
+    <ellipse cx="193" cy="300" rx="40" ry="11"/>
+    <ellipse cx="321" cy="300" rx="42" ry="11"/>
+    <ellipse cx="447" cy="300" rx="40" ry="11"/>
+  </g>
+
+  <!-- Spray can, tilted, mid-pass -->
+  <g transform="rotate(-18 560 190)">
+    <rect x="528" y="130" width="64" height="150" rx="14" fill="#b3b9c4" stroke="#778194" stroke-width="4"/>
+    <rect x="536" y="176" width="48" height="60" fill="#bb8787"/>
+    <rect x="546" y="104" width="28" height="28" rx="6" fill="#c8cbd2" stroke="#778194" stroke-width="4"/>
+    <rect x="552" y="92" width="16" height="14" rx="4" fill="#396bb7"/>
+  </g>
+
+  <!-- Spray mist -->
+  <g fill="#2d3339" opacity="0.3">
+    <circle cx="500" cy="120" r="7"/><circle cx="478" cy="140" r="5"/>
+    <circle cx="462" cy="162" r="8"/><circle cx="442" cy="180" r="4"/>
+    <circle cx="490" cy="160" r="4"/>
+  </g>
+
+  <!-- Newspaper on the booth floor -->
+  <rect x="100" y="312" width="440" height="38" fill="#c6c1b6"/>
+  <g stroke="#b3ada2" stroke-width="3">
+    <path d="M120 324h180M120 336h140M340 324h180M340 336h120"/>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="presentation" focusable="false" aria-hidden="true">
+  <rect width="640" height="400" fill="#dfe1e5"/>
+  <rect width="640" height="400" fill="#e4e0dc"/>
+
+  <!-- Oversized round base filling the frame, seen close up -->
+  <ellipse cx="320" cy="230" rx="290" ry="150" fill="#dcd8d1" stroke="#c8c1b6" stroke-width="6"/>
+  <ellipse cx="320" cy="222" rx="270" ry="136" fill="#d8d1c6"/>
+
+  <!-- Textured soil -->
+  <g fill="#cdc5b7">
+    <ellipse cx="180" cy="240" rx="70" ry="34"/>
+    <ellipse cx="420" cy="270" rx="90" ry="38"/>
+    <ellipse cx="330" cy="180" rx="60" ry="26"/>
+  </g>
+
+  <!-- Scattered grit and slate shards -->
+  <g fill="#bbb3a4" stroke="#a59c88" stroke-width="2">
+    <path d="M120 250l40-14 22 20-34 18z"/>
+    <path d="M400 200l50-10 18 26-42 14z"/>
+    <path d="M300 292l36-8 12 20-32 10z"/>
+  </g>
+  <g fill="#ada592">
+    <circle cx="230" cy="288" r="6"/><circle cx="256" cy="300" r="4"/>
+    <circle cx="470" cy="240" r="5"/><circle cx="494" cy="256" r="7"/>
+    <circle cx="204" cy="182" r="5"/><circle cx="380" cy="150" r="4"/>
+    <circle cx="150" cy="196" r="4"/><circle cx="530" cy="286" r="5"/>
+  </g>
+
+  <!-- Static grass tufts -->
+  <g stroke="#95b075" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M160 300v-24M168 300l8-22M152 300l-8-22M176 300l14-18"/>
+    <path d="M448 178v-22M456 178l10-20M440 178l-10-20"/>
+    <path d="M280 158v-20M288 158l9-18M272 158l-9-18"/>
+  </g>
+  <g stroke="#7c9657" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M164 300v-30M452 178v-28M284 158v-26"/>
+  </g>
+
+  <!-- Boot and lower leg of the miniature standing on the base -->
+  <g fill="#b2b8c4" stroke="#778194" stroke-width="5" stroke-linejoin="round">
+    <path d="M292 40v130h-40l-6 30h94l-6-30h-30V40z"/>
+  </g>
+  <path d="M256 176h84" stroke="#396bb7" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Rim of the base, painted flat black -->
+  <path d="M30 230a290 150 0 0 0 580 0" fill="none" stroke="#e5e7eb" stroke-width="18"/>
+</svg>
