@@ -5,21 +5,20 @@
 
 ## What I checked
 
-All five pages declare `<html lang="en">`, carry exactly one `<h1>`, and step through
-heading levels without skipping. The article itself is marked up as an `<article>` with
-the author box in an `<aside>`, so the main content and the supporting material are
-distinguishable rather than being two visually different `<div>` elements.
+All five pages declare `<html lang="en">`, carry one `<h1>`, and step through heading
+levels without skipping. The post is an `<article>` with the author box in an `<aside>`,
+so main and supporting content are distinguishable rather than two styled `<div>`
+elements.
 
 The search form on `posts.html` covers the four axes the brief asks for — title, author,
 tag and date — plus a sort order, and every control has a `<label for="…">` bound by
 `id`. Publication dates use `<time datetime="…">` with readable text beside the machine
-value, on the index cards, in the byline and in the edit history.
+value.
 
-The composer pages do something the other modules do not: `new-post.html` and
-`edit-post.html` both require an **image description** field alongside the file input,
-marked required and explained through `aria-describedby`. Asking the author for alt text
-at the point of upload is the only way a real version of this site could keep its images
-described, so the form models that rather than pretending the problem away.
+`new-post.html` and `edit-post.html` both require an **image description** field
+alongside the file input, explained through `aria-describedby`. Asking the author for alt
+text at upload is the only way a real version of this site could keep its images
+described.
 
 Ownership follows the same pattern as the forum. On `post.html` the comment written by
 the signed-in account carries a "Your comment" badge with Edit and Delete; the other two
@@ -34,4 +33,4 @@ their own comment lands on a page about their post instead. A real implementatio
 separate comment routes; I chose to keep the page count the brief specifies and record
 the mismatch here rather than quietly adding a sixth page.
 
-*Prose word count: 298, measured excluding headings and the metadata lines above.*
+*Prose word count: 249, measured excluding headings and the metadata lines above.*

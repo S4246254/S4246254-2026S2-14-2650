@@ -8,8 +8,8 @@
 
 ## 1. Roles and module ownership
 
-The brief allocates one module per team member. This site is delivered by a single
-student, so all four module leads are held by the same person. The modules are still
+The brief allocates one module per team member. This site is delivered by just me, a
+single student, so all four module leads are held by the same person. The modules are still
 kept as separate concerns — separate folders, separate page sets, and a separate
 accessibility self-audit statement each — so that each one can be assessed against the
 module criteria on its own terms.
