@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Grimdark Forge</title>
+  <meta name="description" content="About Grimdark Forge: an independent miniature wargaming store in Brunswick, Victoria - what we sell, how the community side of the site works, and our approach to accessibility.">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="about.html" aria-current="page">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="account.html" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="welcome.html">Home</a></li>
+          <li aria-current="page">About</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>About Grimdark Forge</h1>
+          <p class="page-head__lede">
+            An independent hobby store for miniature wargamers, run out of a
+            shopfront in Brunswick since 2019.
+          </p>
+        </div>
+      </div>
+
+      <div class="layout-aside">
+        <div class="prose">
+          <h2>What we sell</h2>
+          <p>
+            Grimdark Forge stocks the things you need between buying a box and
+            putting a finished model on the table: plastic and resin kits, acrylic
+            paints and shades, natural-hair brushes, pre-textured terrain, and the
+            rulebooks that make sense of all of it.
+          </p>
+          <p>
+            The range is deliberately narrow. We would rather carry three brushes
+            that hold a point than thirty that do not, and everything on the shelf
+            has been used by someone who works here.
+          </p>
+
+          <h2>The community</h2>
+          <p>
+            The shop is only half of the site. The forum is where people argue about
+            points costs and post work-in-progress photographs, the blog is where
+            staff write up painting techniques in more detail than a product page
+            allows, and the reviews are written by customers rather than by us.
+          </p>
+          <p>
+            You need an account to post, and you can only edit or delete your own
+            contributions. Everyone else's posts show a Report control instead.
+          </p>
+
+          <h2>Credits</h2>
+          <p>
+            The product illustrations across the site are hand-drawn SVG. The one
+            photograph, on the landing page, is by Robert Coelho and comes from
+            <a href="https://unsplash.com/photos/six-assorted-color-dice-laNNTAth9vs">Unsplash</a>,
+            used under the Unsplash Licence.
+          </p>
+
+          <h2>Accessibility</h2>
+          <p>
+            Every page uses one level-one heading and an unbroken heading order,
+            landmark elements rather than styled containers, a visible focus
+            indicator that is never removed, a skip link, and a text label bound to
+            every form control. Colour is never the only way information is
+            conveyed. Images that carry meaning have descriptive alternative text;
+            decorative images have empty alternative text so screen readers skip
+            them.
+          </p>
+        </div>
+
+        <aside class="layout-aside__side" aria-labelledby="facts-heading">
+          <div class="panel">
+            <h2 class="panel__title" id="facts-heading">At a glance</h2>
+            <dl class="spec-list">
+              <dt>Founded</dt>
+              <dd>2019</dd>
+
+              <dt>Location</dt>
+              <dd>Brunswick, Victoria</dd>
+
+              <dt>Range</dt>
+              <dd>143 products</dd>
+
+              <dt>Community</dt>
+              <dd>214 forum threads</dd>
+            </dl>
+          </div>
+
+          <div class="callout callout--primary">
+            <h2 class="callout__title">Checkout is not live</h2>
+            <p class="text-small">
+              The checkout page accepts sample values only and takes no payment.
+              Please do not enter real card details.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="forum/boards.html">Forum</a></li>
+          <li><a href="blog/posts.html">Blog</a></li>
+          <li><a href="reviews/reviews.html">Reviews</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

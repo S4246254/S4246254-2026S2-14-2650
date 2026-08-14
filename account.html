@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your account — Grimdark Forge</title>
+  <meta name="description" content="Your Grimdark Forge account: switch between profiles, update your details, and see which posts and reviews you can edit or delete.">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a class="wordmark" href="welcome.html">Grimdark Forge</a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="shop/catalogue.html">Shop</a></li>
+          <li><a class="primary-nav__link" href="categories.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__utility">
+        <a class="cart-link" href="shop/cart.html" aria-label="Cart, 3 items">
+          <svg class="cart-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h2.2l2.3 10.5h9.4L19 7H6.2"/>
+              <circle cx="9" cy="19" r="1.4"/>
+              <circle cx="17" cy="19" r="1.4"/>
+            </g>
+          </svg>
+          <span class="cart-link__count" aria-hidden="true">3</span>
+        </a>
+        <a class="account-link" href="account.html" aria-current="page" aria-label="Your account. You are signed in as Kaya Ellery.">
+          <img class="account-link__avatar" src="assets/img/avatar-kaya.svg" alt="" width="28" height="28">
+          <span class="account-link__name">Kaya Ellery</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main">
+    <div class="shell">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li><a href="welcome.html">Home</a></li>
+          <li aria-current="page">Your account</li>
+        </ol>
+      </nav>
+
+      <div class="page-head">
+        <div class="page-head__text">
+          <h1>Your account</h1>
+          <p class="page-head__lede">
+            You are currently signed in as Kaya Ellery. Choose a different account
+            to see how the site changes for another user.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout callout--primary">
+        <h2 class="callout__title">What you can edit</h2>
+        <p>
+          You can only change your own contributions. Posts, reviews and comments
+          written by the account you are signed in as are marked
+          <span class="badge badge--primary">Your post</span> and carry
+          <strong>Edit</strong> and <strong>Delete</strong> controls. Everyone
+          else's content shows a <strong>Report</strong> control instead, so no
+          member can alter another member's words.
+        </p>
+      </div>
+
+      <section class="section" aria-labelledby="switch-heading">
+        <div class="section__head">
+          <h2 id="switch-heading">Choose an account</h2>
+        </div>
+
+        <ul class="account-grid">
+          <li>
+            <article class="account-card account-card--active">
+              <img class="account-card__avatar" src="assets/img/avatar-kaya.svg" alt="Kaya Ellery's avatar: a figure with short dark hair against a slate blue background.">
+              <h3 class="account-card__name">Kaya Ellery</h3>
+              <p class="text-muted text-small">Joined <time datetime="2024-03-11">11 March 2024</time></p>
+              <p class="text-small">Paints infantry, argues about points costs, writes most of the terrain threads.</p>
+              <p><span class="badge badge--primary">Currently signed in</span></p>
+              <p class="text-muted text-small">42 forum posts &middot; 6 reviews</p>
+            </article>
+          </li>
+
+          <li>
+            <article class="account-card">
+              <img class="account-card__avatar" src="assets/img/avatar-toma.svg" alt="Toma Brandt's avatar: a figure with a heavy beard against a deep green background.">
+              <h3 class="account-card__name">Toma Brandt</h3>
+              <p class="text-muted text-small">Joined <time datetime="2023-09-02">2 September 2023</time></p>
+              <p class="text-small">Tournament player. Posts lists, then defends them at length.</p>
+              <p><a class="button button--small" href="account.html">Sign in as Toma</a></p>
+              <p class="text-muted text-small">118 forum posts &middot; 3 reviews</p>
+            </article>
+          </li>
+
+          <li>
+            <article class="account-card">
+              <img class="account-card__avatar" src="assets/img/avatar-renn.svg" alt="Renn Vasco's avatar: a figure with long tied-back hair against a rust brown background.">
+              <h3 class="account-card__name">Renn Vasco</h3>
+              <p class="text-muted text-small">Joined <time datetime="2022-11-19">19 November 2022</time></p>
+              <p class="text-small">Store staff. Writes the painting tutorials on the blog.</p>
+              <p><a class="button button--small" href="account.html">Sign in as Renn</a></p>
+              <p class="text-muted text-small">76 forum posts &middot; 21 blog posts</p>
+            </article>
+          </li>
+
+          <li>
+            <article class="account-card">
+              <img class="account-card__avatar" src="assets/img/avatar-oksana.svg" alt="Oksana Reyes's avatar: a figure with cropped pale hair against a dark violet background.">
+              <h3 class="account-card__name">Oksana Reyes</h3>
+              <p class="text-muted text-small">Joined <time datetime="2025-01-26">26 January 2025</time></p>
+              <p class="text-small">Reviews almost everything she buys, usually within a week.</p>
+              <p><a class="button button--small" href="account.html">Sign in as Oksana</a></p>
+              <p class="text-muted text-small">29 forum posts &middot; 34 reviews</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="details-heading">
+        <div class="section__head">
+          <h2 id="details-heading">Account details</h2>
+        </div>
+
+        <div class="layout-aside">
+          <div>
+            <form class="form">
+              <fieldset class="fieldset">
+                <legend class="fieldset__legend">Profile</legend>
+
+                <div class="form__grid form__grid--two">
+                  <p class="field">
+                    <label class="field__label" for="display-name">Display name <span class="field__required" aria-hidden="true">*</span></label>
+                    <input type="text" id="display-name" name="display-name" value="Kaya Ellery" autocomplete="nickname" required aria-describedby="display-name-hint">
+                    <span class="field__hint" id="display-name-hint">Shown beside every post, review and comment you write.</span>
+                  </p>
+
+                  <p class="field">
+                    <label class="field__label" for="email">Email address <span class="field__required" aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" value="kaya.ellery@example.com" autocomplete="email" required aria-describedby="email-hint">
+                    <span class="field__hint" id="email-hint">Used for order confirmations only. Never shown publicly.</span>
+                  </p>
+                </div>
+
+                <p class="field">
+                  <label class="field__label" for="bio">About you</label>
+                  <textarea id="bio" name="bio" aria-describedby="bio-hint">Painting a Sentinel column one panel at a time. Ask me about weathering powders.</textarea>
+                  <span class="field__hint" id="bio-hint">Appears on your forum profile. Up to 300 characters.</span>
+                </p>
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <legend class="fieldset__legend">Preferences</legend>
+
+                <div class="form__grid form__grid--two">
+                  <p class="field">
+                    <label class="field__label" for="locale">Site language</label>
+                    <select id="locale" name="locale" aria-describedby="locale-hint">
+                      <option value="en-au" selected>English (Australia)</option>
+                      <option value="en-gb">English (United Kingdom)</option>
+                      <option value="de" lang="de">Deutsch</option>
+                      <option value="ja" lang="ja">日本語</option>
+                    </select>
+                    <span class="field__hint" id="locale-hint">Matches the language toggle in the site header.</span>
+                  </p>
+
+                  <p class="field">
+                    <label class="field__label" for="currency">Display currency</label>
+                    <select id="currency" name="currency">
+                      <option value="aud" selected>Australian dollar (A$)</option>
+                      <option value="nzd">New Zealand dollar (NZ$)</option>
+                      <option value="gbp">Pound sterling (£)</option>
+                    </select>
+                  </p>
+                </div>
+
+                <p class="field field--inline">
+                  <input type="checkbox" id="notify-replies" name="notify-replies" checked>
+                  <label class="field__label" for="notify-replies">Email me when someone replies to my forum posts</label>
+                </p>
+
+                <p class="field field--inline">
+                  <input type="checkbox" id="notify-restock" name="notify-restock">
+                  <label class="field__label" for="notify-restock">Email me when a product on my wishlist is back in stock</label>
+                </p>
+              </fieldset>
+
+              <div class="form__actions">
+                <a class="button button--primary" href="account.html">Save changes</a>
+                <a class="button button--quiet" href="welcome.html">Cancel</a>
+              </div>
+            </form>
+          </div>
+
+          <aside class="layout-aside__side" aria-labelledby="activity-heading">
+            <div class="panel">
+              <h3 class="panel__title" id="activity-heading">Your recent activity</h3>
+              <ul class="footer-nav__list">
+                <li>
+                  <a href="forum/thread.html">Replied to “Is the Sentinel actually worth its points at 1500?”</a>
+                  <span class="sitemap-tree__note"><time datetime="2026-08-12">12 August 2026</time></span>
+                </li>
+                <li>
+                  <a href="reviews/review.html">Reviewed the Sable Brush Set</a>
+                  <span class="sitemap-tree__note"><time datetime="2026-08-05">5 August 2026</time></span>
+                </li>
+                <li>
+                  <a href="forum/thread.html">Started “Cork sheet versus insulation foam for cliffs”</a>
+                  <span class="sitemap-tree__note"><time datetime="2026-07-30">30 July 2026</time></span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel__title">Open cart</h3>
+              <p class="text-muted text-small">Three items, held for 14 days.</p>
+              <p class="price">A$85.49</p>
+              <p><a class="button button--block" href="shop/cart.html">View your cart</a></p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__note">Grimdark Forge - independent miniatures and hobby supplies, Brunswick, Victoria.</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="forum/boards.html">Forum</a></li>
+          <li><a href="blog/posts.html">Blog</a></li>
+          <li><a href="reviews/reviews.html">Reviews</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
