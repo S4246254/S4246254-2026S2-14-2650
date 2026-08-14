@@ -86,6 +86,39 @@
   gap: var(--space-s);
 }
 
+/* Locale toggle. A placeholder at this stage: it is a real, focusable button in
+   the same position on every page, but it opens nothing until the language
+   switch becomes functional. Styled to match the cart and account controls
+   rather than as a default form button. */
+.locale-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  padding: var(--space-3xs);
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--step--1);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.locale-toggle__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+}
+
+.locale-toggle__name {
+  white-space: nowrap;
+}
+
+.locale-toggle:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .cart-link {
   display: inline-flex;
   align-items: center;

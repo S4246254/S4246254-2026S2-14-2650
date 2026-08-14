@@ -3,20 +3,20 @@
 A static HTML and CSS storefront and community site for a fictional miniature wargaming
 shop, built as an individual submission covering all four assessment modules.
 
-> **One value still needs filling in before submission:** `YOUR_HOSTING_URL`, which
-> appears five times in the table below and nowhere else in the project.
-
 ## Team members, modules and hosting
+
+Site entry point: <https://titan.csit.rmit.edu.au/~s4246254/welcome.html>
 
 | Name | Student ID | Module responsible for | Hosted at |
 |---|---|---|---|
-| Augustus Zibell-Barnes | S4246254 | Discussion Forum | `YOUR_HOSTING_URL/forum/boards.html` |
-| Augustus Zibell-Barnes | S4246254 | Shopping Cart | `YOUR_HOSTING_URL/shop/catalogue.html` |
-| Augustus Zibell-Barnes | S4246254 | Blog | `YOUR_HOSTING_URL/blog/posts.html` |
-| Augustus Zibell-Barnes | S4246254 | Product Review & Rating | `YOUR_HOSTING_URL/reviews/reviews.html` |
+| Augustus Zibell-Barnes | S4246254 | Discussion Forum | <https://titan.csit.rmit.edu.au/~s4246254/forum/boards.html> |
+| Augustus Zibell-Barnes | S4246254 | Shopping Cart | <https://titan.csit.rmit.edu.au/~s4246254/shop/catalogue.html> |
+| Augustus Zibell-Barnes | S4246254 | Blog | <https://titan.csit.rmit.edu.au/~s4246254/blog/posts.html> |
+| Augustus Zibell-Barnes | S4246254 | Product Review & Rating | <https://titan.csit.rmit.edu.au/~s4246254/reviews/reviews.html> |
 
-All four modules are delivered by a single student. The landing page is
-`welcome.html`, so the site entry point is `YOUR_HOSTING_URL/welcome.html`.
+All four modules are delivered by a single student. The four CoreTeaching servers
+(`titan`, `saturn`, `jupiter`, `coreteaching04`) share one home directory, so the same
+files are reachable through any of them; `titan` is named here for consistency.
 
 Group process decisions required by the brief — ownership of the shared site shell,
 and the agreed locale-switching mechanism — are documented in [CHARTER.md](CHARTER.md).

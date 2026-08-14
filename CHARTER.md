@@ -80,8 +80,9 @@ Not implemented in Assessment Task 1. Agreed approach for the later assessment:
   and keeps dates in `<time datetime="…">` and prices as marked-up text so their
   presentation can be re-formatted per locale rather than being hardcoded.
 
-**Status.** The placeholder control described above is not yet present in the header. It
-is the one item of this charter that the current pages do not implement.
+**Status.** The placeholder control is present in the header of all 25 pages, in the
+position described above. It is a real, focusable `<button>` with an accessible name, but
+it opens nothing — the switching behaviour arrives with the later assessment task.
 
 ## 4. Development and production plan
 
