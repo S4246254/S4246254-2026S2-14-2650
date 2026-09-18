@@ -60,7 +60,8 @@ link resolving.
 
 **Currently signed-in user.** The shell carries the login/logout feature required by
 Assessment Task 2. When nobody is logged in the header shows a **Log in** button that
-leads to `account.php`, where a username (no password) is entered; once logged in the
+leads to `account.php`, where a username (no password) is entered — or, for a new
+visitor, to `register.php` to create an account first; once logged in the
 header shows the account's avatar and name and a **Log out** button. The username is
 held in the PHP session, so the same user is identified on every page of every module.
 Content owned by that account shows Edit and Delete controls; everyone else's does not,
@@ -149,3 +150,42 @@ module pages call the same helpers (`t()`, `money()`, `time_html()`, `validate()
 - All paths are relative, so the site can be moved between servers unchanged.
 - No remote requests: fonts fall through to the platform UI stack and all images are
   stored locally, so the site renders identically with the network disconnected.
+
+## 7. Assessment Task 2 working constraints (formal record)
+
+The Summary Report lists the charter changes as bullet points; this section records each
+as a binding agreement so that any later work (including Assessment Task 3) is measured
+against it.
+
+### 7.1 Shared shell — implementation agreement
+
+| Item | Agreement |
+|---|---|
+| Location | `shared/header.php` (document head, `<header>`, locale toggle, cart count, login/logout), `shared/nav.php` (primary `<nav>`), `shared/footer.php` (`<footer>` and its `<nav>`). |
+| Inclusion | Every page starts with `require_once __DIR__ . '/../shared/bootstrap.php'` (or `/shared/bootstrap.php` at the root) and then `require`s header and footer. No page may embed its own copy of any shell markup. |
+| Paths | `gf_base()` in `shared/bootstrap.php` derives the `../` prefix from the file system, so the shell works from any web root and any module folder without editing. |
+| Per-page data | A page sets `$page_title` and `$page_description` before requiring the header; the header owns `<title>`, `<meta name="description">` and `<html lang>`. |
+| Session state | `session_start()` happens once, in the bootstrap. The shell reads `current_user()` and `locale()`; it never writes to the session directly. Login/logout are handled by `account.php`; the locale by `shared/locale.php`. |
+| Change rule | A shell change is any edit to the three shell files, to `gf_base()`, to `current_user()`/`owns()`/`login()`/`logout()`, or to the locale helpers. It is committed on its own with the rendered-page checks in section 2 re-run across all 23 pages in both locales. |
+
+### 7.2 Locale-switching — agreements confirmed
+
+- The toggle is a `<form method="post" action="…/shared/locale.php">` so it functions without JavaScript; `assets/js/site.js` only improves it (open/close, Escape, outside click, focus management).
+- `shared/locale.php` accepts only the tags listed in `shared/i18n.php`, stores the choice in `$_SESSION['locale']`, and redirects back to the page the visitor came from using `safe_return()` (same-site relative paths only, never an arbitrary URL).
+- Every UI string passes through `t()` (or `te()` when it is also HTML-escaped). Adding a string to a template without a matching entry in `shared/lang/de-DE.php` is accepted temporarily — the fallback is English — but the dictionary is completed before the module is considered finished. The dictionary currently holds 747 entries.
+- All dates, prices and counts use `fmt_date()`/`time_html()`, `money()`/`money_html()` and `number()`. Writing `date()`, `number_format()` or a literal `$` sign into a template is a defect.
+
+### 7.3 New constraints introduced by Assessment Task 2
+
+1. **Storage.** No database and no files under the web root. All data lives in the associative arrays seeded by `shared/data.php` and kept alive between requests by `shared/store.php` (APCu shared memory, or a locked scratch file in the system temp directory when APCu is absent). Only per-visitor state (login, locale, guest cart, CSRF token, flash messages) lives in the PHP session.
+2. **Input handling.** All request data is read through `filter_input()` (never `$_GET`/`$_POST` directly); every POST form carries `csrf_field()` and every POST handler checks `csrf_ok()` before touching the store; every value echoed into HTML goes through `e()`.
+3. **Validation twice.** Rules are declared once per form in PHP (`$rules` arrays) and mirrored as `data-*` attributes for `assets/js/validate.js`. The server result is authoritative. No HTML validation attribute (`required`, `pattern`, `min`, `max`, `maxlength`, `type="email"` for validation purposes) may appear in any template.
+4. **Ownership.** Edit and delete controls render only when `owns($author)` is true, and the handler pages return HTTP 403 (or 404 for a missing record) for anyone else. The check is in the PHP, not only in the template.
+5. **Soft deletion in the forum.** Forum posts are never removed from the array; `deleted => true` hides them. Other modules delete outright, as their briefs allow.
+6. **Images.** Members may attach a library image or upload one (JPEG/PNG/GIF/WebP, at most 1 MB, verified with `getimagesize()` rather than the client-supplied MIME type). Uploads are stored as data URIs inside the store so no file is written under the web root. A text alternative is mandatory whenever an image is attached.
+7. **Money.** All prices are integers in cents. Totals, discounts, delivery and GST (total ÷ 11) are computed server-side in `cart_totals()`; `assets/js/shop.js` only mirrors them for live display.
+8. **Compatibility.** `php -l` on every file before commit; no PHP 8-only syntax so the site runs on the CoreTeaching servers' PHP 7.4.
+
+### 7.4 Definition of done for a module page
+
+A page is done when: it renders in both locales with no PHP notices; the section 2 checks pass; its create/update/delete paths have been exercised over HTTP with valid, invalid and foreign-owner requests; and the German dictionary contains every string it introduced.
