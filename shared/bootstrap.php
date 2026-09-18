@@ -300,12 +300,6 @@ function number(float $value, int $decimals = 0): string
     return number_format($value, $decimals, $conf['decimal'], $conf['group']);
 }
 
-/** Number wrapped for client-side re-formatting. */
-function number_html(float $value, int $decimals = 0): string
-{
-    return '<span data-number="' . e((string) $value) . '" data-decimals="' . $decimals . '">' . e(number($value, $decimals)) . '</span>';
-}
-
 /**
  * Format an ISO 8601 date or date-time for the active locale.
  * $style is 'date' (13 August 2026) or 'datetime' (13 August 2026 at 9:40 pm).

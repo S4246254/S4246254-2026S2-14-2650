@@ -90,12 +90,6 @@ function &gf_store(): array
     return $GLOBALS['gf_store'];
 }
 
-/** Mark the store as changed so it is written back at shutdown. */
-function gf_store_touch(): void
-{
-    $GLOBALS['gf_store_dirty'] = true;
-}
-
 /** Replace the whole store (used by reset). */
 function gf_store_replace(array $data): void
 {

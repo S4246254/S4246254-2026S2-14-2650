@@ -2,7 +2,7 @@
  * Grimdark Forge — shared client-side behaviour.
  *
  * 1. Locale toggle: the header button expands the list of locales.
- * 2. Locale-aware formatting: every price, count and date the server renders
+ * 2. Locale-aware formatting: every price and date the server renders
  *    is re-formatted with Intl for the active <html lang>, so the browser and
  *    the server agree and the format follows the locale, not a hard-coded
  *    English/Australian pattern.
@@ -26,17 +26,6 @@
       return new Intl.NumberFormat(locale, { style: 'currency', currency: currency || 'AUD' }).format(cents / 100);
     } catch (err) {
       return (cents / 100).toFixed(2);
-    }
-  };
-
-  GF.number = function (value, decimals) {
-    try {
-      return new Intl.NumberFormat(locale, {
-        minimumFractionDigits: decimals || 0,
-        maximumFractionDigits: decimals || 0
-      }).format(value);
-    } catch (err) {
-      return String(value);
     }
   };
 
@@ -71,11 +60,6 @@
     els = root.querySelectorAll('[data-money]');
     for (i = 0; i < els.length; i++) {
       els[i].textContent = GF.money(parseInt(els[i].getAttribute('data-money'), 10), els[i].getAttribute('data-currency'));
-    }
-
-    els = root.querySelectorAll('[data-number]');
-    for (i = 0; i < els.length; i++) {
-      els[i].textContent = GF.number(parseFloat(els[i].getAttribute('data-number')), parseInt(els[i].getAttribute('data-decimals') || '0', 10));
     }
 
     els = root.querySelectorAll('time[datetime][data-format]');
