@@ -37,7 +37,9 @@ brief specifies. These four accounts own the sample content:
 | `renn` | Renn Vasco | 1 thread, replies, 2 blog posts, 1 review |
 | `oksana` | Oksana Reyes | 1 thread, replies, 1 blog post, 2 reviews |
 
-Any other username creates a fresh account with no content. Only the account that
+A username that does not exist is rejected at login; new visitors use **Create an
+account** (`register.php`, linked from the login form) and give a username, display
+name and email address — still no password. Only the account that
 wrote a post, comment, blog post or review can edit or delete it; everyone else sees
 no Edit/Delete controls **and** the server answers an edit or delete request for
 someone else's content with HTTP 403. Because the store is shared, two markers in
@@ -97,7 +99,8 @@ system, so the site runs unchanged in any web root.
 
 - **Shared shell server-side.** Header, nav and footer are PHP includes pulled in by
   every page with `require`; nothing is copy-pasted.
-- **Login / logout** in the shared header on every page; username only.
+- **Login / logout** in the shared header on every page; username only. Unknown
+  usernames are rejected and sent to `register.php` to create an account.
 - **In-memory storage, shared by all visitors.** `shared/data.php` provides the
   hard-coded associative arrays; `shared/store.php` keeps that structure alive between
   requests (APCu shared memory when the server has it, otherwise one serialised scratch

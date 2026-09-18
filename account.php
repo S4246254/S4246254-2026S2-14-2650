@@ -40,6 +40,9 @@ if (is_post()) {
     if ($action === 'login') {
         $values = form_values($login_rules);
         $errors = validate($login_rules, $values);
+        if (!$errors && !user(strtolower($values['username']))) {
+            $errors['username'] = t('No account with that username. Create an account to get started.');
+        }
         if (!$errors) {
             login(strtolower($values['username']));
             flash('success', t('You are now logged in as %1$s.', [user_name(current_user())]));
@@ -112,13 +115,14 @@ require __DIR__ . '/shared/header.php';
                 <label class="field__label" for="username"><?= te('Username') ?> <span class="field__required" aria-hidden="true">*</span></label>
                 <input type="text" id="username" name="username" value="<?= e($values['username']) ?>" autocomplete="username" autocapitalize="none" data-required data-type="username"<?= invalid_attrs($errors, 'username', 'username-hint') ?>>
                 <?= error_html($errors, 'username') ?>
-                <span class="field__hint" id="username-hint"><?= te('Try kaya, toma, renn or oksana to see existing content as its owner, or any new name to start fresh.') ?></span>
+                <span class="field__hint" id="username-hint"><?= te('Try kaya, toma, renn or oksana to see existing content as its owner.') ?></span>
               </p>
             </fieldset>
             <div class="form__actions">
               <button type="submit" class="button button--primary"><?= te('Log in') ?></button>
               <a class="button button--quiet" href="welcome.php"><?= te('Cancel') ?></a>
             </div>
+            <p class="text-muted"><?= t('Don\'t have an account? <a href="register.php?return=%1$s">Create one</a>.', [rawurlencode($return)]) ?></p>
           </form>
         </div>
 

@@ -41,7 +41,8 @@ username. No password is required.
 | `renn` | Renn Vasco | 1 forum thread and replies, 2 blog posts, 1 review |
 | `oksana` | Oksana Reyes | 1 forum thread and replies, 1 blog post, 2 reviews |
 
-Any other username (3–20 letters, digits or underscores) creates a new empty account.
+Any other username is rejected at login. Use *Create one* under the login form
+(`register.php`) to make a new account with a username, display name and email.
 
 **Testing ownership.** Log in as `kaya`, open the forum thread *Is the Sentinel actually
 worth its points at 1500?* — Kaya's reply carries *Your post* with Edit and Delete;
@@ -111,7 +112,7 @@ translated, as the brief allows at this stage.
 
 ## 5. Verification performed
 
-- Every page (23 distinct pages) rendered through PHP in both locales and checked for
+- Every page (24 distinct pages) rendered through PHP in both locales and checked for
   the correct `<html lang>`, one `h1`, no heading jumps, no HTML validation attributes,
   no inline styles, no duplicate ids, `alt` on every image, a label for every control,
   every `aria-describedby` target present, every internal link resolving and no PHP

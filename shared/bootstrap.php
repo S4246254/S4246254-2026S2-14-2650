@@ -186,23 +186,29 @@ function owns(?string $author): bool
 }
 
 /**
- * Sign in. Unknown usernames are created on the fly (the brief asks only for
- * a username, no password). A guest cart is merged into the user's cart.
+ * Sign in an existing account (the brief asks only for a username, no
+ * password). A guest cart is merged into the user's cart. Unknown usernames
+ * are rejected by the caller; accounts are made with create_account().
  */
 function login(string $username): void
 {
-    $users = &collection('users');
-    if (!isset($users[$username])) {
-        $users[$username] = [
-            'name'   => $username,
-            'avatar' => 'assets/img/avatar-default.svg',
-            'joined' => date('Y-m-d'),
-            'bio'    => '',
-            'email'  => $username . '@example.com',
-        ];
-    }
     $_SESSION['user'] = $username;
     gf_merge_guest_cart($username);
+}
+
+/** Create a new account and sign it in. The caller checks the name is free. */
+function create_account(string $username, string $name, string $email): void
+{
+    $users = &collection('users');
+    $users[$username] = [
+        'name'   => $name,
+        'avatar' => 'assets/img/avatar-default.svg',
+        'joined' => date('Y-m-d'),
+        'bio'    => '',
+        'email'  => $email,
+    ];
+    unset($users);
+    login($username);
 }
 
 /** Sign out. The cart stays with the user record it was saved against. */
